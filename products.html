@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Construction Materials — Whyte Contracting LLC</title>
+  <meta name="description" content="Premium asphalt, gravel, sand, bluestone, and topsoil supply on Long Island, NY. Sourced right, delivered fast. DBE Certified & Veteran Operated.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Plus+Jakarta+Sans:wght@500;700&family=Vollkorn:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#ffffff", "on-tertiary": "#ffffff", "background": "#fef9f1",
+            "surface-container": "#f2ede5", "on-secondary-container": "#765600", "on-surface-variant": "#564243",
+            "on-secondary": "#ffffff", "surface-variant": "#e7e2da",
+            "primary-container": "#7b1c2e", "tertiary-container": "#41413e",
+            "surface-container-low": "#f8f3eb", "secondary-fixed-dim": "#eec05e",
+            "tertiary": "#2b2b28", "inverse-surface": "#32302b", "surface-bright": "#fef9f1",
+            "on-tertiary-container": "#aeada9", "on-primary-container": "#ff8a96",
+            "surface-container-highest": "#e7e2da", "primary": "#5c021a",
+            "surface-container-high": "#ece8e0", "inverse-on-surface": "#f5f0e8",
+            "secondary-container": "#fdce6a", "primary-fixed": "#ffdadb",
+            "on-primary": "#ffffff", "outline-variant": "#dcc0c1",
+            "on-background": "#1d1c17", "outline": "#897172", "on-surface": "#1d1c17",
+            "surface-dim": "#ded9d2", "secondary": "#795900", "surface": "#fef9f1"
+          },
+          borderRadius: { "DEFAULT": "0.5rem", "sm": "0.25rem", "md": "0.75rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+          spacing: { "base": "8px", "container-max": "1280px", "margin-mobile": "16px", "margin-desktop": "48px", "stack-sm": "16px", "stack-md": "32px", "stack-lg": "64px" },
+          fontFamily: { headline: ["Vollkorn","serif"], display: ["Vollkorn","serif"], body: ["Merriweather","serif"], label: ["Plus Jakarta Sans","sans-serif"] },
+          fontSize: {
+            "display-lg": ["72px",{lineHeight:"1.1",letterSpacing:"-0.02em",fontWeight:"700"}],
+            "display-lg-mobile": ["48px",{lineHeight:"1.1",fontWeight:"700"}],
+            "headline-lg": ["40px",{lineHeight:"1.2",fontWeight:"700"}],
+            "headline-md": ["32px",{lineHeight:"1.2",fontWeight:"600"}],
+            "subhead-lg": ["24px",{lineHeight:"1.3",fontWeight:"600"}],
+            "body-lg": ["18px",{lineHeight:"1.6",fontWeight:"400"}],
+            "body-md": ["16px",{lineHeight:"1.6",fontWeight:"400"}],
+            "label-bold": ["14px",{lineHeight:"1.2",letterSpacing:"0.05em",fontWeight:"700"}],
+            "label-sm": ["12px",{lineHeight:"1.2",letterSpacing:"0.03em",fontWeight:"500"}]
+          }
+        }
+      }
+    }
+  </script>
+  <style>.material-symbols-outlined { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }</style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased">
+
+<!-- NAV -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-sm border-b-2 border-outline-variant shadow-sm">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+    <a href="index.html" class="font-headline text-2xl font-bold text-primary tracking-tight">Whyte Contracting LLC</a>
+    <nav class="hidden md:flex items-center space-x-8">
+      <a href="index.html" class="font-label text-label-bold text-on-surface-variant hover:text-primary transition-colors">Home</a>
+      <a href="about.html" class="font-label text-label-bold text-on-surface-variant hover:text-primary transition-colors">About</a>
+      <a href="services.html" class="font-label text-label-bold text-on-surface-variant hover:text-primary transition-colors">Services</a>
+      <a href="products.html" class="font-label text-label-bold text-primary border-b-2 border-primary pb-0.5">Products</a>
+      <a href="gallery.html" class="font-label text-label-bold text-on-surface-variant hover:text-primary transition-colors">Gallery</a>
+      <a href="contact.html" class="font-label text-label-bold text-on-surface-variant hover:text-primary transition-colors">Contact</a>
+    </nav>
+    <a href="contact.html" class="hidden lg:inline-flex items-center gap-2 px-6 py-2.5 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#32302b] transition-all">Request a Quote</a>
+    <button id="menu-btn" class="md:hidden text-primary p-1"><span class="material-symbols-outlined text-3xl">menu</span></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-outline-variant px-6 py-6 flex flex-col gap-5">
+    <a href="index.html" class="font-label text-label-bold text-on-surface-variant">Home</a>
+    <a href="about.html" class="font-label text-label-bold text-on-surface-variant">About</a>
+    <a href="services.html" class="font-label text-label-bold text-on-surface-variant">Services</a>
+    <a href="products.html" class="font-label text-label-bold text-primary">Products</a>
+    <a href="gallery.html" class="font-label text-label-bold text-on-surface-variant">Gallery</a>
+    <a href="contact.html" class="font-label text-label-bold text-on-surface-variant">Contact</a>
+    <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b]">Request a Quote</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative pt-20">
+  <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[60vh]">
+    <div class="bg-surface-container-low flex flex-col justify-center px-8 md:px-16 py-20">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-surface rounded-sm border border-secondary mb-6 self-start">
+        <span class="material-symbols-outlined text-secondary text-sm">verified</span>
+        <span class="font-label text-label-sm text-on-surface uppercase tracking-widest">Quality & Compliance Guaranteed</span>
+      </div>
+      <h1 class="font-display text-display-lg-mobile md:text-headline-lg lg:text-display-lg-mobile text-primary mb-6 leading-tight">Construction Materials —<br>Sourced Right,<br>Delivered Fast</h1>
+      <p class="font-body text-body-lg text-on-surface-variant mb-8 max-w-lg">At Whyte Contracting, we supply premium-grade materials for construction, paving, and landscaping projects. All inventory is available in bulk, all loads are compliant.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="contact.html" class="inline-flex items-center gap-2 px-8 py-4 bg-primary text-on-primary font-label text-label-bold rounded shadow-[4px_4px_0px_#32302b] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#32302b] transition-all">Request a Material Quote <span class="material-symbols-outlined text-base">arrow_forward</span></a>
+      </div>
+    </div>
+    <div class="relative min-h-[50vh] lg:min-h-0 overflow-hidden">
+      <img src="./images/materials.png" alt="Large construction material stockpile with excavator" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-l from-transparent to-surface-container-low/20"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MATERIAL INVENTORY -->
+<section class="py-24 bg-surface" id="inventory">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
+      <div>
+        <span class="font-label text-label-bold text-secondary uppercase tracking-widest">Full Inventory</span>
+        <h2 class="font-headline text-headline-lg text-primary mt-1">Our Material Inventory</h2>
+      </div>
+      <!-- View Toggle -->
+      <div class="flex items-center gap-2 bg-surface-container rounded-lg border border-outline-variant p-1">
+        <button id="grid-view-btn" class="p-2 rounded bg-primary text-on-primary transition-colors" title="Grid view"><span class="material-symbols-outlined text-xl">grid_view</span></button>
+        <button id="list-view-btn" class="p-2 rounded text-on-surface-variant hover:bg-surface-container-high transition-colors" title="List view"><span class="material-symbols-outlined text-xl">view_list</span></button>
+      </div>
+    </div>
+
+    <!-- Grid View -->
+    <div id="grid-view" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Asphalt -->
+      <div class="bg-surface-container rounded-lg border border-outline-variant overflow-hidden shadow-sm hover:shadow-[4px_4px_0px_#897172] hover:-translate-y-1 transition-all group">
+        <div class="h-48 overflow-hidden relative">
+          <img src="./images/hero-dump-truck.png" alt="Hot mix asphalt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute top-3 left-3"><span class="bg-primary text-on-primary font-label text-label-sm px-2 py-1 rounded-sm uppercase tracking-widest">Paving</span></div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-headline text-headline-md text-primary mb-2">Asphalt</h3>
+          <p class="font-body text-body-md text-on-surface-variant mb-4">Hot mix asphalt for road paving, parking lots, and driveway projects. Available in standard and polymer-modified mixes.</p>
+          <div class="flex items-center justify-between">
+            <span class="font-label text-label-sm text-on-surface-variant uppercase tracking-widest">Sold by Ton</span>
+            <a href="contact.html" class="inline-flex items-center gap-1 px-4 py-2 bg-primary text-on-primary font-label text-label-bold text-sm rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#32302b] transition-all">Request Price</a>
+          </div>
+        </div>
+      </div>
+      <!-- Sand -->
+      <div class="bg-surface-container rounded-lg border border-outline-variant overflow-hidden shadow-sm hover:shadow-[4px_4px_0px_#897172] hover:-translate-y-1 transition-all group">
+        <div class="h-48 overflow-hidden relative bg-[#d4b896] flex items-center justify-center">
+          <div class="text-center">
+            <span class="material-symbols-outlined text-6xl text-[#795900]/50">landscape</span>
+            <p class="font-label text-label-sm text-[#795900]/60 mt-2 uppercase tracking-widest">Industrial Sand</p>
+          </div>
+          <div class="absolute top-3 left-3"><span class="bg-secondary text-on-secondary font-label text-label-sm px-2 py-1 rounded-sm uppercase tracking-widest">Backfill</span></div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-headline text-headline-md text-primary mb-2">Sand</h3>
+          <p class="font-body text-body-md text-on-surface-variant mb-4">Washed and screened industrial sand for drainage, concrete mixing, and utility trench backfill applications.</p>
+          <div class="flex items-center justify-between">
+            <span class="font-label text-label-sm text-on-surface-variant uppercase tracking-widest">Sold by Yard / Ton</span>
+            <a href="contact.html" class="inline-flex items-center gap-1 px-4 py-2 bg-primary text-on-primary font-label text-label-bold text-sm rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#32302b] transition-all">Request Price</a>
+          </div>
+        </div>
+      </div>
+      <!-- Gravel -->
+      <div class="bg-surface-container rounded-lg border border-outline-variant overflow-hidden shadow-sm hover:shadow-[4px_4px_0px_#897172] hover:-translate-y-1 transition-all group">
+        <div class="h-48 overflow-hidden relative">
+          <img src="./images/materials.png" alt="Crushed gravel stockpile" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute top-3 left-3"><span class="bg-tertiary text-on-tertiary font-label text-label-sm px-2 py-1 rounded-sm uppercase tracking-widest">Base Course</span></div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-headline text-headline-md text-primary mb-2">Gravel</h3>
+          <p class="font-body text-body-md text-on-surface-variant mb-4">Crushed stone and processed gravel in various gradations for road base, drainage, and foundation applications.</p>
+          <div class="flex items-center justify-between">
+            <span class="font-label text-label-sm text-on-surface-variant uppercase tracking-widest">Sold by Ton</span>
+            <a href="contact.html" class="inline-flex items-center gap-1 px-4 py-2 bg-primary text-on-primary font-label text-label-bold text-sm rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#32302b] transition-all">Request Price</a>
+          </div>
+        </div>
+      </div>
+      <!-- Bluestone -->
+      <div class="bg-surface-container rounded-lg border border-outline-variant overflow-hidden shadow-sm hover:shadow-[4px_4px_0px_#897172] hover:-translate-y-1 transition-all group">
+        <div class="h-48 overflow-hidden relative bg-[#8899aa] flex items-center justify-center">
+          <div class="text-center">
+            <span class="material-symbols-outlined text-6xl text-white/30">hexagon</span>
+            <p class="font-label text-label-sm text-white/60 mt-2 uppercase tracking-widest">Bluestone</p>
+          </div>
+          <div class="absolute top-3 left-3"><span class="bg-[#2b3a4a] text-white font-label text-label-sm px-2 py-1 rounded-sm uppercase tracking-widest">Decorative</span></div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-headline text-headline-md text-primary mb-2">Bluestone</h3>
+          <p class="font-body text-body-md text-on-surface-variant mb-4">Premium Pennsylvania bluestone for walkways, patios, and landscape edging. Available in irregular and dimensional cuts.</p>
+          <div class="flex items-center justify-between">
+            <span class="font-label text-label-sm text-on-surface-variant uppercase tracking-widest">Sold by Ton / SF</span>
+            <a href="contact.html" class="inline-flex items-center gap-1 px-4 py-2 bg-primary text-on-primary font-label text-label-bold text-sm rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#32302b] transition-all">Request Price</a>
+          </div>
+        </div>
+      </div>
+      <!-- Topsoil -->
+      <div class="bg-surface-container rounded-lg border border-outline-variant overflow-hidden shadow-sm hover:shadow-[4px_4px_0px_#897172] hover:-translate-y-1 transition-all group">
+        <div class="h-48 overflow-hidden relative bg-[#5c4a2a] flex items-center justify-center">
+          <div class="text-center">
+            <span class="material-symbols-outlined text-6xl text-[#fdce6a]/40">eco</span>
+            <p class="font-label text-label-sm text-[#fdce6a]/60 mt-2 uppercase tracking-widest">Screened Topsoil</p>
+          </div>
+          <div class="absolute top-3 left-3"><span class="bg-secondary text-on-secondary font-label text-label-sm px-2 py-1 rounded-sm uppercase tracking-widest">Landscaping</span></div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-headline text-headline-md text-primary mb-2">Topsoil</h3>
+          <p class="font-body text-body-md text-on-surface-variant mb-4">Screened premium topsoil for grading, seeding, and landscaping. Loam-based mix with consistent nutrient content and low debris.</p>
+          <div class="flex items-center justify-between">
+            <span class="font-label text-label-sm text-on-surface-variant uppercase tracking-widest">Sold by Yard</span>
+            <a href="contact.html" class="inline-flex items-center gap-1 px-4 py-2 bg-primary text-on-primary font-label text-label-bold text-sm rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#32302b] transition-all">Request Price</a>
+          </div>
+        </div>
+      </div>
+      <!-- RCA -->
+      <div class="bg-surface-container rounded-lg border border-outline-variant overflow-hidden shadow-sm hover:shadow-[4px_4px_0px_#897172] hover:-translate-y-1 transition-all group">
+        <div class="h-48 overflow-hidden relative bg-[#8a8a80] flex items-center justify-center">
+          <div class="text-center">
+            <span class="material-symbols-outlined text-6xl text-white/30">recycling</span>
+            <p class="font-label text-label-sm text-white/60 mt-2 uppercase tracking-widest">RCA / Fill Stone</p>
+          </div>
+          <div class="absolute top-3 left-3"><span class="bg-outline text-white font-label text-label-sm px-2 py-1 rounded-sm uppercase tracking-widest">Reclaimed</span></div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-headline text-headline-md text-primary mb-2">RCA / Fill Stone</h3>
+          <p class="font-body text-body-md text-on-surface-variant mb-4">Recycled concrete aggregate for subbase applications. A cost-effective, sustainable alternative to virgin aggregate for permitted projects.</p>
+          <div class="flex items-center justify-between">
+            <span class="font-label text-label-sm text-on-surface-variant uppercase tracking-widest">Sold by Ton</span>
+            <a href="contact.html" class="inline-flex items-center gap-1 px-4 py-2 bg-primary text-on-primary font-label text-label-bold text-sm rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#32302b] transition-all">Request Price</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- List View (hidden by default) -->
+    <div id="list-view" class="hidden space-y-4">
+      <div class="bg-surface-container rounded-lg border border-outline-variant p-6 flex flex-col md:flex-row md:items-center gap-4 hover:shadow-[4px_4px_0px_#897172] transition-all">
+        <div class="w-full md:w-24 h-24 rounded overflow-hidden shrink-0"><img src="./images/hero-dump-truck.png" alt="Asphalt" class="w-full h-full object-cover"></div>
+        <div class="flex-1"><h3 class="font-headline text-subhead-lg text-primary mb-1">Asphalt</h3><p class="font-body text-sm text-on-surface-variant">Hot mix asphalt for road paving, parking lots, and driveways. Standard and polymer-modified mixes available.</p><span class="font-label text-label-sm text-secondary mt-2 inline-block">Sold by Ton · Paving</span></div>
+        <a href="contact.html" class="shrink-0 inline-flex items-center gap-1 px-6 py-3 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] transition-all">Quote</a>
+      </div>
+      <div class="bg-surface-container rounded-lg border border-outline-variant p-6 flex flex-col md:flex-row md:items-center gap-4 hover:shadow-[4px_4px_0px_#897172] transition-all">
+        <div class="w-full md:w-24 h-24 rounded overflow-hidden shrink-0 bg-[#d4b896] flex items-center justify-center"><span class="material-symbols-outlined text-3xl text-[#795900]/60">landscape</span></div>
+        <div class="flex-1"><h3 class="font-headline text-subhead-lg text-primary mb-1">Sand</h3><p class="font-body text-sm text-on-surface-variant">Washed industrial sand for drainage, concrete mixing, and utility trench backfill.</p><span class="font-label text-label-sm text-secondary mt-2 inline-block">Sold by Yard / Ton · Backfill</span></div>
+        <a href="contact.html" class="shrink-0 inline-flex items-center gap-1 px-6 py-3 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] transition-all">Quote</a>
+      </div>
+      <div class="bg-surface-container rounded-lg border border-outline-variant p-6 flex flex-col md:flex-row md:items-center gap-4 hover:shadow-[4px_4px_0px_#897172] transition-all">
+        <div class="w-full md:w-24 h-24 rounded overflow-hidden shrink-0"><img src="./images/materials.png" alt="Gravel" class="w-full h-full object-cover"></div>
+        <div class="flex-1"><h3 class="font-headline text-subhead-lg text-primary mb-1">Gravel</h3><p class="font-body text-sm text-on-surface-variant">Crushed stone and processed gravel for road base, drainage, and foundation.</p><span class="font-label text-label-sm text-secondary mt-2 inline-block">Sold by Ton · Base Course</span></div>
+        <a href="contact.html" class="shrink-0 inline-flex items-center gap-1 px-6 py-3 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] transition-all">Quote</a>
+      </div>
+      <div class="bg-surface-container rounded-lg border border-outline-variant p-6 flex flex-col md:flex-row md:items-center gap-4 hover:shadow-[4px_4px_0px_#897172] transition-all">
+        <div class="w-full md:w-24 h-24 rounded overflow-hidden shrink-0 bg-[#8899aa] flex items-center justify-center"><span class="material-symbols-outlined text-3xl text-white/40">hexagon</span></div>
+        <div class="flex-1"><h3 class="font-headline text-subhead-lg text-primary mb-1">Bluestone</h3><p class="font-body text-sm text-on-surface-variant">Premium Pennsylvania bluestone for walkways and patio applications.</p><span class="font-label text-label-sm text-secondary mt-2 inline-block">Sold by Ton / SF · Decorative</span></div>
+        <a href="contact.html" class="shrink-0 inline-flex items-center gap-1 px-6 py-3 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] transition-all">Quote</a>
+      </div>
+      <div class="bg-surface-container rounded-lg border border-outline-variant p-6 flex flex-col md:flex-row md:items-center gap-4 hover:shadow-[4px_4px_0px_#897172] transition-all">
+        <div class="w-full md:w-24 h-24 rounded overflow-hidden shrink-0 bg-[#5c4a2a] flex items-center justify-center"><span class="material-symbols-outlined text-3xl text-[#fdce6a]/50">eco</span></div>
+        <div class="flex-1"><h3 class="font-headline text-subhead-lg text-primary mb-1">Topsoil</h3><p class="font-body text-sm text-on-surface-variant">Screened premium topsoil for grading, seeding, and landscaping.</p><span class="font-label text-label-sm text-secondary mt-2 inline-block">Sold by Yard · Landscaping</span></div>
+        <a href="contact.html" class="shrink-0 inline-flex items-center gap-1 px-6 py-3 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] transition-all">Quote</a>
+      </div>
+      <div class="bg-surface-container rounded-lg border border-outline-variant p-6 flex flex-col md:flex-row md:items-center gap-4 hover:shadow-[4px_4px_0px_#897172] transition-all">
+        <div class="w-full md:w-24 h-24 rounded overflow-hidden shrink-0 bg-[#8a8a80] flex items-center justify-center"><span class="material-symbols-outlined text-3xl text-white/40">recycling</span></div>
+        <div class="flex-1"><h3 class="font-headline text-subhead-lg text-primary mb-1">RCA / Fill Stone</h3><p class="font-body text-sm text-on-surface-variant">Recycled concrete aggregate — cost-effective subbase for permitted projects.</p><span class="font-label text-label-sm text-secondary mt-2 inline-block">Sold by Ton · Reclaimed</span></div>
+        <a href="contact.html" class="shrink-0 inline-flex items-center gap-1 px-6 py-3 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] transition-all">Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 bg-tertiary border-t-4 border-secondary relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10" style="background-image:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,.1) 20px,rgba(255,255,255,.1) 21px)"></div>
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12 text-center relative z-10">
+    <span class="font-label text-label-bold text-secondary uppercase tracking-widest">Get Started</span>
+    <h2 class="font-headline text-headline-lg text-on-tertiary mt-2 mb-4">Ready to Supply Your Next Project?</h2>
+    <p class="font-body text-body-lg text-on-tertiary/80 max-w-xl mx-auto mb-10">Contact us with your material quantities and delivery schedule. Our team will respond with a detailed quote within one business day.</p>
+    <a href="contact.html" class="inline-flex items-center gap-2 px-10 py-4 bg-primary text-on-primary font-label text-label-bold text-base rounded shadow-[4px_4px_0px_#1b1c19] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#1b1c19] transition-all">
+      <span class="material-symbols-outlined">request_quote</span> Request a Material Quote
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-tertiary text-on-tertiary border-t-4 border-secondary">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12 py-16 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="md:col-span-2">
+      <div class="font-headline text-xl font-bold text-on-tertiary mb-4">Whyte Contracting LLC</div>
+      <p class="font-body text-sm text-on-tertiary/80 max-w-sm mb-6 leading-relaxed">Industrial-grade hauling and material supply services across Long Island, NY. DBE Certified & Veteran Operated.</p>
+    </div>
+    <div>
+      <h4 class="font-label text-label-bold text-secondary mb-5 uppercase tracking-wider text-xs">Quick Links</h4>
+      <div class="flex flex-col space-y-3">
+        <a href="index.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">Home</a>
+        <a href="about.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">About Us</a>
+        <a href="services.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">Services</a>
+        <a href="products.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">Products</a>
+        <a href="gallery.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">Gallery</a>
+        <a href="careers.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">Careers</a>
+        <a href="contact.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">Contact</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-label text-label-bold text-secondary mb-5 uppercase tracking-wider text-xs">Contact</h4>
+      <div class="flex flex-col space-y-3">
+        <div class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-base mt-0.5">call</span><a href="tel:+16319330772" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary">(631) 933-0772</a></div>
+        <div class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-base mt-0.5">mail</span><a href="mailto:info@whytecontracting.com" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary">info@whytecontracting.com</a></div>
+        <div class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-base mt-0.5">location_on</span><span class="font-body text-sm text-on-tertiary/80">P.O. Box 116, Copiague, NY 11726</span></div>
+      </div>
+    </div>
+    <div class="md:col-span-4 border-t border-on-tertiary/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="font-label text-label-sm text-on-tertiary/60">© 2025 Whyte Contracting LLC. Copiague, NY. All Rights Reserved.</p>
+      <div class="flex gap-6">
+        <span class="font-label text-xs text-secondary uppercase tracking-widest">DBE Certified</span>
+        <span class="font-label text-xs text-secondary uppercase tracking-widest">Veteran Operated</span>
+        <span class="font-label text-xs text-secondary uppercase tracking-widest">DOT Compliant</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menu-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+  const gridView = document.getElementById('grid-view');
+  const listView = document.getElementById('list-view');
+  const gridBtn = document.getElementById('grid-view-btn');
+  const listBtn = document.getElementById('list-view-btn');
+  gridBtn.addEventListener('click', () => {
+    gridView.classList.remove('hidden'); listView.classList.add('hidden');
+    gridBtn.classList.add('bg-primary','text-on-primary'); gridBtn.classList.remove('text-on-surface-variant','hover:bg-surface-container-high');
+    listBtn.classList.remove('bg-primary','text-on-primary'); listBtn.classList.add('text-on-surface-variant','hover:bg-surface-container-high');
+  });
+  listBtn.addEventListener('click', () => {
+    listView.classList.remove('hidden'); gridView.classList.add('hidden');
+    listBtn.classList.add('bg-primary','text-on-primary'); listBtn.classList.remove('text-on-surface-variant','hover:bg-surface-container-high');
+    gridBtn.classList.remove('bg-primary','text-on-primary'); gridBtn.classList.add('text-on-surface-variant','hover:bg-surface-container-high');
+  });
+</script>
+</body>
+</html>

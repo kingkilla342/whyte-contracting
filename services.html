@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Whyte Contracting LLC</title>
+  <meta name="description" content="Heavy-haul dump truck services, material delivery, paving support, snow removal, and site prep across Long Island, NY. DBE Certified & Veteran Operated.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Plus+Jakarta+Sans:wght@500;700&family=Vollkorn:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#ffffff", "on-tertiary": "#ffffff", "background": "#fef9f1",
+            "surface-container": "#f2ede5", "on-secondary-container": "#765600", "on-surface-variant": "#564243",
+            "on-secondary": "#ffffff", "surface-variant": "#e7e2da", "on-error": "#ffffff",
+            "primary-container": "#7b1c2e", "tertiary-container": "#41413e", "on-tertiary-fixed": "#1b1c19",
+            "surface-tint": "#a23a4a", "surface-container-low": "#f8f3eb", "error-container": "#ffdad6",
+            "tertiary": "#2b2b28", "inverse-surface": "#32302b", "surface-bright": "#fef9f1",
+            "on-tertiary-container": "#aeada9", "on-primary-container": "#ff8a96",
+            "surface-container-highest": "#e7e2da", "primary": "#5c021a",
+            "surface-container-high": "#ece8e0", "inverse-on-surface": "#f5f0e8", "error": "#ba1a1a",
+            "secondary-container": "#fdce6a", "primary-fixed": "#ffdadb",
+            "on-primary": "#ffffff", "outline-variant": "#dcc0c1", "inverse-primary": "#ffb2b8",
+            "on-background": "#1d1c17", "outline": "#897172", "on-surface": "#1d1c17",
+            "surface-dim": "#ded9d2", "secondary": "#795900", "surface": "#fef9f1"
+          },
+          borderRadius: { "DEFAULT": "0.5rem", "sm": "0.25rem", "md": "0.75rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+          spacing: { "base": "8px", "container-max": "1280px", "margin-mobile": "16px", "margin-desktop": "48px", "stack-sm": "16px", "stack-md": "32px", "stack-lg": "64px" },
+          fontFamily: { headline: ["Vollkorn","serif"], display: ["Vollkorn","serif"], body: ["Merriweather","serif"], label: ["Plus Jakarta Sans","sans-serif"] },
+          fontSize: {
+            "display-lg": ["72px",{lineHeight:"1.1",letterSpacing:"-0.02em",fontWeight:"700"}],
+            "display-lg-mobile": ["48px",{lineHeight:"1.1",fontWeight:"700"}],
+            "headline-lg": ["40px",{lineHeight:"1.2",fontWeight:"700"}],
+            "headline-md": ["32px",{lineHeight:"1.2",fontWeight:"600"}],
+            "subhead-lg": ["24px",{lineHeight:"1.3",fontWeight:"600"}],
+            "body-lg": ["18px",{lineHeight:"1.6",fontWeight:"400"}],
+            "body-md": ["16px",{lineHeight:"1.6",fontWeight:"400"}],
+            "label-bold": ["14px",{lineHeight:"1.2",letterSpacing:"0.05em",fontWeight:"700"}],
+            "label-sm": ["12px",{lineHeight:"1.2",letterSpacing:"0.03em",fontWeight:"500"}]
+          }
+        }
+      }
+    }
+  </script>
+  <style>.material-symbols-outlined { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }</style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased">
+
+<!-- NAV -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-sm border-b-2 border-outline-variant shadow-sm">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+    <a href="index.html" class="font-headline text-2xl font-bold text-primary tracking-tight">Whyte Contracting LLC</a>
+    <nav class="hidden md:flex items-center space-x-8">
+      <a href="index.html" class="font-label text-label-bold text-on-surface-variant hover:text-primary transition-colors">Home</a>
+      <a href="about.html" class="font-label text-label-bold text-on-surface-variant hover:text-primary transition-colors">About</a>
+      <a href="services.html" class="font-label text-label-bold text-primary border-b-2 border-primary pb-0.5">Services</a>
+      <a href="products.html" class="font-label text-label-bold text-on-surface-variant hover:text-primary transition-colors">Products</a>
+      <a href="gallery.html" class="font-label text-label-bold text-on-surface-variant hover:text-primary transition-colors">Gallery</a>
+      <a href="contact.html" class="font-label text-label-bold text-on-surface-variant hover:text-primary transition-colors">Contact</a>
+    </nav>
+    <a href="contact.html" class="hidden lg:inline-flex items-center gap-2 px-6 py-2.5 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#32302b] transition-all">Request a Quote</a>
+    <button id="menu-btn" class="md:hidden text-primary p-1"><span class="material-symbols-outlined text-3xl">menu</span></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-outline-variant px-6 py-6 flex flex-col gap-5">
+    <a href="index.html" class="font-label text-label-bold text-on-surface-variant">Home</a>
+    <a href="about.html" class="font-label text-label-bold text-on-surface-variant">About</a>
+    <a href="services.html" class="font-label text-label-bold text-primary">Services</a>
+    <a href="products.html" class="font-label text-label-bold text-on-surface-variant">Products</a>
+    <a href="gallery.html" class="font-label text-label-bold text-on-surface-variant">Gallery</a>
+    <a href="contact.html" class="font-label text-label-bold text-on-surface-variant">Contact</a>
+    <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b]">Request a Quote</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative pt-20 min-h-[65vh] flex items-end overflow-hidden">
+  <img src="./images/truck-waterfront.png" alt="Burgundy Whyte Contracting dump truck on Long Island waterfront construction site" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"></div>
+  <div class="relative z-10 max-w-[1280px] mx-auto px-6 md:px-12 pb-16 pt-32">
+    <div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary/90 rounded-sm mb-4">
+      <span class="material-symbols-outlined text-on-secondary text-sm">local_shipping</span>
+      <span class="font-label text-label-sm text-on-secondary uppercase tracking-widest">DOT Certified Operations</span>
+    </div>
+    <h1 class="font-display text-display-lg-mobile md:text-display-lg text-white mb-4 drop-shadow-lg">Reliable Heavy-Haul<br>Services for Long Island</h1>
+    <p class="font-body text-body-lg text-white/80 max-w-2xl">From dump truck hauling to site preparation and snow removal — we deliver capability, compliance, and raw industrial experience on every job.</p>
+  </div>
+</section>
+
+<!-- SERVICES DETAIL -->
+<section class="py-24 bg-surface">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+
+    <!-- Service 1: Dump Truck -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container rounded-sm border border-secondary mb-4">
+          <span class="material-symbols-outlined text-secondary text-sm">local_shipping</span>
+          <span class="font-label text-label-sm text-on-secondary-container uppercase tracking-widest">Service 01</span>
+        </div>
+        <h2 class="font-headline text-headline-lg text-primary mb-4">Dump Truck Services</h2>
+        <p class="font-body text-body-lg text-on-surface-variant mb-6 leading-relaxed">We operate a fleet of heavy-duty dump trucks capable of handling everything from residential landscaping loads to large-scale municipal infrastructure projects. Every driver holds a valid CDL and adheres to full DOT compliance.</p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3 font-body text-body-md text-on-surface"><span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span><span><strong class="font-headline">Site Preparation:</strong> Earth moving, grading support, and fill disposal.</span></li>
+          <li class="flex items-start gap-3 font-body text-body-md text-on-surface"><span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span><span><strong class="font-headline">Aggregate Hauling:</strong> Sand, gravel, stone, and RCA transport.</span></li>
+          <li class="flex items-start gap-3 font-body text-body-md text-on-surface"><span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span><span><strong class="font-headline">Demo Debris Removal:</strong> Safe and compliant removal of construction waste.</span></li>
+          <li class="flex items-start gap-3 font-body text-body-md text-on-surface"><span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span><span><strong class="font-headline">Municipal Contracts:</strong> Qualified and certified for government project bids.</span></li>
+        </ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 px-8 py-4 bg-primary text-on-primary font-label text-label-bold rounded shadow-[4px_4px_0px_#32302b] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#32302b] transition-all">Get a Hauling Quote <span class="material-symbols-outlined">arrow_forward</span></a>
+      </div>
+      <div class="relative rounded-lg overflow-hidden border-2 border-outline-variant shadow-[6px_6px_0px_#897172]">
+        <img src="./images/hero-dump-truck.png" alt="Whyte Contracting burgundy dump truck at golden hour" class="w-full h-96 object-cover">
+      </div>
+    </div>
+
+    <!-- Service 2: Material Delivery -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
+      <div class="order-2 lg:order-1 relative rounded-lg overflow-hidden border-2 border-outline-variant shadow-[6px_6px_0px_#897172]">
+        <img src="./images/materials.png" alt="Construction materials stockpile - gravel and crushed stone" class="w-full h-96 object-cover">
+      </div>
+      <div class="order-1 lg:order-2">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container rounded-sm border border-secondary mb-4">
+          <span class="material-symbols-outlined text-secondary text-sm">inventory_2</span>
+          <span class="font-label text-label-sm text-on-secondary-container uppercase tracking-widest">Service 02</span>
+        </div>
+        <h2 class="font-headline text-headline-lg text-primary mb-4">Material Delivery</h2>
+        <p class="font-body text-body-lg text-on-surface-variant mb-6 leading-relaxed">We source and deliver construction-grade materials directly to your job site. Our inventory includes premium asphalt, industrial sand, crushed gravel, bluestone, and screened topsoil — all weighed and documented.</p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3 font-body text-body-md text-on-surface"><span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span><span><strong class="font-headline">Next-Day Delivery:</strong> Available for most material orders in the service area.</span></li>
+          <li class="flex items-start gap-3 font-body text-body-md text-on-surface"><span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span><span><strong class="font-headline">Bulk Orders:</strong> Competitive pricing on multi-load material contracts.</span></li>
+          <li class="flex items-start gap-3 font-body text-body-md text-on-surface"><span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span><span><strong class="font-headline">Spec Compliance:</strong> Materials available in DOT-spec grades for public works.</span></li>
+        </ul>
+        <a href="products.html" class="inline-flex items-center gap-2 px-8 py-4 bg-secondary text-on-secondary font-label text-label-bold rounded shadow-[4px_4px_0px_#32302b] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#32302b] transition-all">Browse Our Inventory <span class="material-symbols-outlined">arrow_forward</span></a>
+      </div>
+    </div>
+
+    <!-- Services 3–5 Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
+      <div class="bg-surface-container rounded-lg border border-outline-variant p-8 shadow-sm">
+        <div class="w-12 h-12 bg-primary rounded flex items-center justify-center mb-4 shadow-[2px_2px_0px_#32302b]">
+          <span class="material-symbols-outlined text-on-primary">construction</span>
+        </div>
+        <h3 class="font-headline text-subhead-lg text-primary mb-3">Paving Support</h3>
+        <p class="font-body text-body-md text-on-surface-variant">Delivering hot mix asphalt and subbase materials to paving crews. Coordinated scheduling to keep rollers moving and avoid downtime.</p>
+      </div>
+      <div class="bg-surface-container rounded-lg border border-outline-variant p-8 shadow-sm">
+        <div class="w-12 h-12 bg-primary rounded flex items-center justify-center mb-4 shadow-[2px_2px_0px_#32302b]">
+          <span class="material-symbols-outlined text-on-primary">ac_unit</span>
+        </div>
+        <h3 class="font-headline text-subhead-lg text-primary mb-3">Snow Removal</h3>
+        <p class="font-body text-body-md text-on-surface-variant">Commercial snow hauling and removal services for large lots, municipal facilities, and industrial properties across Long Island.</p>
+      </div>
+      <div class="bg-surface-container rounded-lg border border-outline-variant p-8 shadow-sm">
+        <div class="w-12 h-12 bg-primary rounded flex items-center justify-center mb-4 shadow-[2px_2px_0px_#32302b]">
+          <span class="material-symbols-outlined text-on-primary">handshake</span>
+        </div>
+        <h3 class="font-headline text-subhead-lg text-primary mb-3">Subcontractor Fleet</h3>
+        <p class="font-body text-body-md text-on-surface-variant">GC and prime contractor support. We deploy trucks and drivers on-demand for your broader project operations. Bonded and insured.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="py-20 bg-surface-container border-y border-outline-variant">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+    <div class="text-center mb-12">
+      <span class="font-label text-label-bold text-secondary uppercase tracking-widest">Coverage</span>
+      <h2 class="font-headline text-headline-lg text-primary mt-2">Our Service Area</h2>
+      <p class="font-body text-body-lg text-on-surface-variant mt-4 max-w-xl mx-auto">Based in Copiague, NY — serving all of Long Island and select Tri-State metro markets.</p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 max-w-4xl mx-auto">
+      <div class="flex items-center gap-2 px-4 py-3 bg-surface rounded border border-outline-variant font-label text-label-bold text-on-surface text-sm"><span class="material-symbols-outlined text-secondary text-sm">location_on</span>Nassau County</div>
+      <div class="flex items-center gap-2 px-4 py-3 bg-surface rounded border border-outline-variant font-label text-label-bold text-on-surface text-sm"><span class="material-symbols-outlined text-secondary text-sm">location_on</span>Suffolk County</div>
+      <div class="flex items-center gap-2 px-4 py-3 bg-surface rounded border border-outline-variant font-label text-label-bold text-on-surface text-sm"><span class="material-symbols-outlined text-secondary text-sm">location_on</span>Queens, NY</div>
+      <div class="flex items-center gap-2 px-4 py-3 bg-surface rounded border border-outline-variant font-label text-label-bold text-on-surface text-sm"><span class="material-symbols-outlined text-secondary text-sm">location_on</span>Brooklyn, NY</div>
+      <div class="flex items-center gap-2 px-4 py-3 bg-surface rounded border border-outline-variant font-label text-label-bold text-on-surface text-sm"><span class="material-symbols-outlined text-secondary text-sm">location_on</span>The Bronx, NY</div>
+      <div class="flex items-center gap-2 px-4 py-3 bg-surface rounded border border-outline-variant font-label text-label-bold text-on-surface text-sm"><span class="material-symbols-outlined text-secondary text-sm">location_on</span>Westchester</div>
+      <div class="flex items-center gap-2 px-4 py-3 bg-surface rounded border border-outline-variant font-label text-label-bold text-on-surface text-sm"><span class="material-symbols-outlined text-secondary text-sm">location_on</span>New Jersey</div>
+      <div class="flex items-center gap-2 px-4 py-3 bg-surface rounded border border-outline-variant font-label text-label-bold text-on-surface text-sm"><span class="material-symbols-outlined text-secondary text-sm">location_on</span>Connecticut</div>
+      <div class="flex items-center gap-2 px-4 py-3 bg-surface rounded border border-outline-variant font-label text-label-bold text-on-surface text-sm"><span class="material-symbols-outlined text-secondary text-sm">location_on</span>Copiague HQ</div>
+      <div class="flex items-center gap-2 px-4 py-3 bg-primary rounded border border-primary font-label text-label-bold text-on-primary text-sm"><span class="material-symbols-outlined text-secondary text-sm">add_circle</span>& More</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-24 bg-surface" id="faq">
+  <div class="max-w-3xl mx-auto px-6 md:px-12">
+    <div class="text-center mb-12">
+      <span class="font-label text-label-bold text-secondary uppercase tracking-widest">FAQ</span>
+      <h2 class="font-headline text-headline-lg text-primary mt-2">Frequently Asked Questions</h2>
+    </div>
+    <div class="space-y-3" id="faq-list">
+      <div class="faq-item bg-surface-container rounded-lg border border-outline-variant overflow-hidden">
+        <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left font-headline text-subhead-lg text-primary hover:bg-surface-container-high transition-colors">
+          <span>Are you DOT compliant?</span>
+          <span class="material-symbols-outlined faq-icon text-outline transition-transform">expand_more</span>
+        </button>
+        <div class="faq-panel hidden px-6 pb-6 font-body text-body-md text-on-surface-variant leading-relaxed">Yes. All of our trucks, drivers, and operations fully comply with U.S. Department of Transportation regulations. Every vehicle undergoes regular inspections and all drivers maintain valid CDL licenses with the appropriate endorsements.</div>
+      </div>
+      <div class="faq-item bg-surface-container rounded-lg border border-outline-variant overflow-hidden">
+        <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left font-headline text-subhead-lg text-primary hover:bg-surface-container-high transition-colors">
+          <span>How do I request a quote?</span>
+          <span class="material-symbols-outlined faq-icon text-outline transition-transform">expand_more</span>
+        </button>
+        <div class="faq-panel hidden px-6 pb-6 font-body text-body-md text-on-surface-variant leading-relaxed">Use the Quote Request form on our Contact page, or call us directly at (631) 933-0772. Our dispatch team reviews all inquiries during operating hours and typically responds within a few hours on business days.</div>
+      </div>
+      <div class="faq-item bg-surface-container rounded-lg border border-outline-variant overflow-hidden">
+        <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left font-headline text-subhead-lg text-primary hover:bg-surface-container-high transition-colors">
+          <span>Do you handle large-scale municipal contracts?</span>
+          <span class="material-symbols-outlined faq-icon text-outline transition-transform">expand_more</span>
+        </button>
+        <div class="faq-panel hidden px-6 pb-6 font-body text-body-md text-on-surface-variant leading-relaxed">Absolutely. Our DBE certification makes us eligible for bid inclusion on state and municipal infrastructure projects. We've supported road construction, drainage, and utility work across Long Island. Contact us to discuss bid requirements and capacity.</div>
+      </div>
+      <div class="faq-item bg-surface-container rounded-lg border border-outline-variant overflow-hidden">
+        <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left font-headline text-subhead-lg text-primary hover:bg-surface-container-high transition-colors">
+          <span>Can you schedule same-day or next-day deliveries?</span>
+          <span class="material-symbols-outlined faq-icon text-outline transition-transform">expand_more</span>
+        </button>
+        <div class="faq-panel hidden px-6 pb-6 font-body text-body-md text-on-surface-variant leading-relaxed">We do our best to accommodate urgent requests, especially for material deliveries. Availability depends on current truck scheduling and material inventory. Call us directly for the fastest turnaround: (631) 933-0772.</div>
+      </div>
+      <div class="faq-item bg-surface-container rounded-lg border border-outline-variant overflow-hidden">
+        <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left font-headline text-subhead-lg text-primary hover:bg-surface-container-high transition-colors">
+          <span>What insurance coverage do you carry?</span>
+          <span class="material-symbols-outlined faq-icon text-outline transition-transform">expand_more</span>
+        </button>
+        <div class="faq-panel hidden px-6 pb-6 font-body text-body-md text-on-surface-variant leading-relaxed">We carry full commercial auto liability, general liability, and workers' compensation insurance. Certificates of insurance are available upon request for GCs and project owners requiring documentation.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 bg-tertiary border-t-4 border-secondary relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10" style="background-image:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,.1) 20px,rgba(255,255,255,.1) 21px)"></div>
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12 text-center relative z-10">
+    <h2 class="font-headline text-headline-lg text-on-tertiary mb-4">Ready to Move Ground?</h2>
+    <p class="font-body text-body-lg text-on-tertiary/80 max-w-xl mx-auto mb-10">Tell us about your project and we'll mobilize the equipment and materials you need — on your timeline.</p>
+    <a href="contact.html" class="inline-flex items-center gap-2 px-10 py-4 bg-primary text-on-primary font-label text-label-bold text-base rounded shadow-[4px_4px_0px_#1b1c19] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#1b1c19] transition-all">
+      <span class="material-symbols-outlined">send</span> Get a Free Quote
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-tertiary text-on-tertiary border-t-4 border-secondary">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12 py-16 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="md:col-span-2">
+      <div class="font-headline text-xl font-bold text-on-tertiary mb-4">Whyte Contracting LLC</div>
+      <p class="font-body text-sm text-on-tertiary/80 max-w-sm mb-6 leading-relaxed">Industrial-grade hauling and material supply services across Long Island, NY. DBE Certified & Veteran Operated.</p>
+      <div class="flex items-center gap-3">
+        <a href="tel:+16319330772" class="font-label text-label-bold text-secondary hover:text-on-tertiary transition-colors">(631) 933-0772</a>
+        <span class="text-on-tertiary/30">·</span>
+        <a href="mailto:info@whytecontracting.com" class="font-label text-label-bold text-secondary hover:text-on-tertiary transition-colors">info@whytecontracting.com</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-label text-label-bold text-secondary mb-5 uppercase tracking-wider text-xs">Quick Links</h4>
+      <div class="flex flex-col space-y-3">
+        <a href="index.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">Home</a>
+        <a href="about.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">About Us</a>
+        <a href="services.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">Services</a>
+        <a href="products.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">Products</a>
+        <a href="gallery.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">Gallery</a>
+        <a href="careers.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">Careers</a>
+        <a href="contact.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">Contact</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-label text-label-bold text-secondary mb-5 uppercase tracking-wider text-xs">Contact</h4>
+      <div class="flex flex-col space-y-3">
+        <div class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-base mt-0.5">call</span><a href="tel:+16319330772" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary">(631) 933-0772</a></div>
+        <div class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-base mt-0.5">mail</span><a href="mailto:info@whytecontracting.com" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary">info@whytecontracting.com</a></div>
+        <div class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-base mt-0.5">location_on</span><span class="font-body text-sm text-on-tertiary/80">P.O. Box 116, Copiague, NY 11726</span></div>
+      </div>
+    </div>
+    <div class="md:col-span-4 border-t border-on-tertiary/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="font-label text-label-sm text-on-tertiary/60">© 2025 Whyte Contracting LLC. Copiague, NY. All Rights Reserved.</p>
+      <div class="flex gap-6">
+        <span class="font-label text-xs text-secondary uppercase tracking-widest">DBE Certified</span>
+        <span class="font-label text-xs text-secondary uppercase tracking-widest">Veteran Operated</span>
+        <span class="font-label text-xs text-secondary uppercase tracking-widest">DOT Compliant</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menu-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const panel = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      const isOpen = !panel.classList.contains('hidden');
+      document.querySelectorAll('.faq-panel').forEach(p => p.classList.add('hidden'));
+      document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotate-180'));
+      if (!isOpen) { panel.classList.remove('hidden'); icon.classList.add('rotate-180'); }
+    });
+  });
+</script>
+</body>
+</html>

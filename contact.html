@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Whyte Contracting LLC</title>
+<!-- Fonts: Vollkorn (Headlines), Merriweather (Body), Plus Jakarta Sans (Labels) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@500;700&amp;family=Vollkorn:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "background": "#fef9f1",
+                      "surface-container": "#f2ede5",
+                      "on-secondary-container": "#765600",
+                      "on-surface-variant": "#564243",
+                      "on-secondary": "#ffffff",
+                      "surface-variant": "#e7e2da",
+                      "on-error": "#ffffff",
+                      "primary-container": "#7b1c2e",
+                      "tertiary-container": "#41413e",
+                      "on-tertiary-fixed": "#1b1c19",
+                      "surface-tint": "#a23a4a",
+                      "surface-container-low": "#f8f3eb",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed": "#261a00",
+                      "on-primary-fixed": "#40000f",
+                      "secondary-fixed-dim": "#eec05e",
+                      "tertiary": "#2b2b28",
+                      "inverse-surface": "#32302b",
+                      "surface-bright": "#fef9f1",
+                      "on-error-container": "#93000a",
+                      "tertiary-fixed": "#e4e2de",
+                      "on-tertiary-container": "#aeada9",
+                      "on-secondary-fixed-variant": "#5c4300",
+                      "on-primary-container": "#ff8a96",
+                      "surface-container-highest": "#e7e2da",
+                      "primary": "#5c021a",
+                      "on-tertiary-fixed-variant": "#474744",
+                      "surface-container-high": "#ece8e0",
+                      "inverse-on-surface": "#f5f0e8",
+                      "error": "#ba1a1a",
+                      "secondary-container": "#fdce6a",
+                      "primary-fixed": "#ffdadb",
+                      "tertiary-fixed-dim": "#c8c6c2",
+                      "secondary-fixed": "#ffdea0",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed-variant": "#832234",
+                      "outline-variant": "#dcc0c1",
+                      "inverse-primary": "#ffb2b8",
+                      "on-background": "#1d1c17",
+                      "outline": "#897172",
+                      "on-surface": "#1d1c17",
+                      "surface-dim": "#ded9d2",
+                      "secondary": "#795900",
+                      "primary-fixed-dim": "#ffb2b8",
+                      "surface": "#fef9f1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": ["Vollkorn"],
+                      "display": ["Vollkorn"],
+                      "body": ["Merriweather"],
+                      "label": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {}
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-sm border-b-2 border-outline-variant shadow-sm">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+    <a href="index.html" class="font-headline text-2xl font-bold text-primary tracking-tight">Whyte Contracting LLC</a>
+    <div class="hidden md:flex items-center gap-8 font-label text-sm font-bold">
+      <a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors" href="services.html">Services</a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors" href="products.html">Products</a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors" href="gallery.html">Gallery</a>
+      <a class="text-primary border-b-2 border-primary font-bold pb-1" href="contact.html">Contact</a>
+    </div>
+    <div class="hidden lg:block">
+      <a href="contact.html" class="bg-primary text-on-primary font-label font-bold text-sm px-6 py-2.5 rounded-lg hover:bg-primary-container transition-colors shadow-[2px_2px_0px_#32302b]">Request a Quote</a>
+    </div>
+    <button id="menu-btn" class="md:hidden text-primary"><span class="material-symbols-outlined text-3xl">menu</span></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-outline-variant px-6 py-6 flex flex-col gap-5">
+    <a href="index.html" class="font-label text-label-bold text-on-surface-variant">Home</a>
+    <a href="about.html" class="font-label text-label-bold text-on-surface-variant">About</a>
+    <a href="services.html" class="font-label text-label-bold text-on-surface-variant">Services</a>
+    <a href="products.html" class="font-label text-label-bold text-on-surface-variant">Products</a>
+    <a href="gallery.html" class="font-label text-label-bold text-on-surface-variant">Gallery</a>
+    <a href="contact.html" class="font-label text-label-bold text-primary">Contact</a>
+    <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b]">Request a Quote</a>
+  </div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-surface-dim border-b border-outline-variant overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Whyte Contracting LLC — Long Island construction site operations" class="w-full h-full object-cover opacity-20 mix-blend-multiply" src="./images/truck-waterfront.png"/>
+</div>
+<div class="relative z-10 max-w-[1280px] mx-auto px-6 md:px-12">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container rounded-sm border border-secondary mb-6">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">handshake</span>
+<span class="font-label text-xs font-bold text-on-surface uppercase tracking-wider">Partner With Us</span>
+</div>
+<h1 class="font-headline text-5xl md:text-6xl lg:text-7xl font-bold text-primary leading-tight mb-4 tracking-tight">
+                    Let's Get to Work.
+                </h1>
+<p class="font-body text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                    Ready to mobilize your next heavy-duty project? Reach out to our logistics and contracting team today. We deliver precision, compliance, and raw capability.
+                </p>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="max-w-[1280px] mx-auto px-6 md:px-12 py-16 md:py-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+<!-- Left Column: Quote Form -->
+<div class="lg:col-span-7 bg-surface-container rounded-lg border border-outline shadow-[4px_4px_0px_#897172] p-8 md:p-10 relative">
+<!-- Decorative Rivets -->
+<div class="absolute top-4 left-4 w-2 h-2 rounded-full bg-outline-variant shadow-inner"></div>
+<div class="absolute top-4 right-4 w-2 h-2 rounded-full bg-outline-variant shadow-inner"></div>
+<div class="absolute bottom-4 left-4 w-2 h-2 rounded-full bg-outline-variant shadow-inner"></div>
+<div class="absolute bottom-4 right-4 w-2 h-2 rounded-full bg-outline-variant shadow-inner"></div>
+<div class="mb-8 border-b border-outline-variant pb-6">
+<h2 class="font-headline text-3xl font-bold text-primary flex items-center gap-3">
+<span class="material-symbols-outlined text-3xl">contract_edit</span>
+                        Quote Request
+                    </h2>
+<p class="font-body text-on-surface-variant mt-2 text-sm">Provide project details below. Our dispatch team reviews inquiries hourly during normal operations.</p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Full Name *</label>
+<input class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="John Doe" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Company (Optional)</label>
+<input class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="Your Company Name" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Phone Number *</label>
+<input class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="(555) 000-0000" required="" type="tel"/>
+</div>
+<div>
+<label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Email Address *</label>
+<input class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="info@example.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 bg-surface border border-outline-variant rounded-lg">
+<div>
+<label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Service Needed *</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body appearance-none focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm cursor-pointer pr-10" required="">
+<option disabled="" selected="" value="">Select a Service</option>
+<option value="freight">Heavy Haul &amp; Freight</option>
+<option value="materials">Material Supply</option>
+<option value="equipment">Equipment Transport</option>
+<option value="site">Site Preparation</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-outline pointer-events-none">arrow_drop_down</span>
+</div>
+</div>
+<div>
+<label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide flex items-center gap-2">
+                                Material Needed
+                                <span class="text-xs text-on-surface-variant font-normal normal-case">(If applicable)</span>
+</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body appearance-none focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm cursor-pointer pr-10">
+<option disabled="" selected="" value="">Select Material</option>
+<option value="gravel">Crushed Gravel</option>
+<option value="sand">Industrial Sand</option>
+<option value="topsoil">Screened Topsoil</option>
+<option value="stone">RCA / Stone</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-outline pointer-events-none">arrow_drop_down</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Project Location</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-outline">location_on</span>
+<input class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 pl-10 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="City, State or ZIP" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Est. Load Size / Tonnage</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-outline">weight</span>
+<input class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 pl-10 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="e.g., 50 Tons, 3 Loads" type="text"/>
+</div>
+</div>
+</div>
+<div>
+<label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">How Did You Hear About Us?</label>
+<input class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="Referral, Search Engine, etc." type="text"/>
+</div>
+<div class="pt-4">
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label font-bold text-base px-8 py-4 rounded-lg hover:bg-primary-container transition-all shadow-[4px_4px_0px_#32302b] active:translate-y-1 active:shadow-none" type="submit">
+<span class="material-symbols-outlined">send</span>
+                            Send My Request
+                        </button>
+</div>
+</form>
+</div>
+<!-- Right Column: Contact Info & Map -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<!-- Contact Details Card -->
+<div class="bg-surface-container-low rounded-lg border border-outline-variant p-8 shadow-sm">
+<h3 class="font-headline text-2xl font-bold text-primary mb-6 pb-4 border-b border-outline-variant">
+                        Direct Dispatch
+                    </h3>
+<ul class="space-y-6 font-body text-on-surface">
+<li class="flex items-start gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant group-hover:border-secondary group-hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-secondary transition-colors" style="font-variation-settings: 'FILL' 1;">call</span>
+</div>
+<div>
+<span class="block font-label text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1">Phone</span>
+<a class="text-lg font-bold hover:text-primary transition-colors" href="tel:+16319330772">(631) 933-0772</a>
+</div>
+</li>
+<li class="flex items-start gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant group-hover:border-secondary group-hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-secondary transition-colors" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<div>
+<span class="block font-label text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1">Email</span>
+<a class="text-lg font-bold hover:text-primary transition-colors" href="mailto:info@whytecontracting.com">info@whytecontracting.com</a>
+</div>
+</li>
+<li class="flex items-start gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant group-hover:border-secondary group-hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-secondary transition-colors" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div>
+<span class="block font-label text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1">Mailing Address</span>
+<span class="text-lg block font-bold">P.O. Box 116</span>
+<span class="text-on-surface-variant">Copiague, NY 11726</span>
+</div>
+</li>
+<li class="flex items-start gap-4 group pt-4 border-t border-outline-variant">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 1;">schedule</span>
+</div>
+<div>
+<span class="block font-label text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1">Operating Hours</span>
+<div class="text-sm space-y-1">
+<div class="flex justify-between w-48">
+<span class="font-bold">Mon - Fri:</span>
+<span>6:00 AM - 5:00 PM</span>
+</div>
+<div class="flex justify-between w-48">
+<span class="font-bold">Saturday:</span>
+<span>7:00 AM - 1:00 PM</span>
+</div>
+<div class="flex justify-between w-48 text-outline">
+<span class="font-bold">Sunday:</span>
+<span>Closed</span>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<!-- Map Placeholder -->
+<div class="bg-surface-container rounded-lg border border-outline shadow-sm p-2">
+<div class="relative w-full h-64 rounded bg-surface-dim overflow-hidden border border-outline-variant">
+<iframe src="https://maps.google.com/maps?q=Copiague+NY+11726&hl=en&z=14&output=embed" class="w-full h-full border-0" loading="lazy" title="Whyte Contracting LLC — Copiague, NY" allowfullscreen></iframe>
+<!-- Fake Map Pin -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="bg-primary text-on-primary rounded-full p-2 shadow-lg mb-1">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">warehouse</span>
+</div>
+<div class="bg-surface text-primary font-label text-xs font-bold px-2 py-1 rounded shadow-sm border border-outline-variant">
+                                Copiague HQ
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust Strips / Badges -->
+<div class="mt-20 pt-12 border-t border-outline-variant">
+<div class="text-center mb-8">
+<span class="font-label text-sm font-bold text-on-surface-variant uppercase tracking-widest">Officially Recognized &amp; Certified</span>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<!-- Badge 1 -->
+<div class="flex items-center gap-3 bg-surface-container px-6 py-3 rounded-lg border-2 border-secondary shadow-sm">
+<span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label font-bold text-on-surface tracking-wide">DBE Certified</span>
+</div>
+<!-- Badge 2 -->
+<div class="flex items-center gap-3 bg-surface-container px-6 py-3 rounded-lg border-2 border-secondary shadow-sm">
+<span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<span class="font-label font-bold text-on-surface tracking-wide">Veteran Operated</span>
+</div>
+<!-- Badge 3 -->
+<div class="flex items-center gap-3 bg-surface-container px-6 py-3 rounded-lg border-2 border-secondary shadow-sm">
+<span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+<span class="font-label font-bold text-on-surface tracking-wide">DOT Compliant</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-tertiary text-on-tertiary border-t-4 border-secondary mt-12">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12 py-16 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="md:col-span-2">
+      <div class="font-headline text-xl font-bold text-on-tertiary mb-4">Whyte Contracting LLC</div>
+      <p class="font-body text-sm text-on-tertiary/80 max-w-sm mb-6">Delivering heavy-duty structural integrity and precision logistics to Long Island and the Tri-State area.</p>
+    </div>
+    <div>
+      <h4 class="font-label text-label-bold text-secondary mb-4 uppercase tracking-wider text-xs">Quick Links</h4>
+      <div class="flex flex-col space-y-2">
+        <a class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all" href="index.html">Home</a>
+        <a class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all" href="about.html">About Us</a>
+        <a class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all" href="services.html">Services</a>
+        <a class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all" href="products.html">Products</a>
+        <a class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all" href="gallery.html">Gallery</a>
+        <a class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all" href="careers.html">Careers</a>
+      </div>
+    </div>
+    <div class="md:col-span-4 border-t border-on-tertiary/20 pt-8 text-center">
+      <p class="font-label text-label-sm text-on-tertiary/60">© 2025 Whyte Contracting LLC. Copiague, NY. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('menu-btn').addEventListener('click',()=>document.getElementById('mobile-menu').classList.toggle('hidden'));</script>
+</body></html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Whyte Contracting LLC</title>
+  <meta name="description" content="Whyte Contracting LLC is a veteran-owned hauling and contracting business in Copiague, NY. Built on integrity, reliability, and 20+ years of industrial experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Plus+Jakarta+Sans:wght@500;700&family=Vollkorn:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#ffffff", "on-tertiary": "#ffffff", "background": "#fef9f1",
+            "surface-container": "#f2ede5", "on-secondary-container": "#765600", "on-surface-variant": "#564243",
+            "on-secondary": "#ffffff", "surface-variant": "#e7e2da",
+            "primary-container": "#7b1c2e", "tertiary-container": "#41413e",
+            "surface-container-low": "#f8f3eb", "secondary-fixed-dim": "#eec05e",
+            "tertiary": "#2b2b28", "inverse-surface": "#32302b", "surface-bright": "#fef9f1",
+            "on-tertiary-container": "#aeada9", "on-primary-container": "#ff8a96",
+            "surface-container-highest": "#e7e2da", "primary": "#5c021a",
+            "surface-container-high": "#ece8e0", "inverse-on-surface": "#f5f0e8",
+            "secondary-container": "#fdce6a", "primary-fixed": "#ffdadb",
+            "on-primary": "#ffffff", "outline-variant": "#dcc0c1",
+            "on-background": "#1d1c17", "outline": "#897172", "on-surface": "#1d1c17",
+            "surface-dim": "#ded9d2", "secondary": "#795900", "surface": "#fef9f1"
+          },
+          borderRadius: { "DEFAULT": "0.5rem", "sm": "0.25rem", "md": "0.75rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+          spacing: { "base": "8px", "container-max": "1280px", "margin-mobile": "16px", "margin-desktop": "48px", "stack-sm": "16px", "stack-md": "32px", "stack-lg": "64px" },
+          fontFamily: { headline: ["Vollkorn","serif"], display: ["Vollkorn","serif"], body: ["Merriweather","serif"], label: ["Plus Jakarta Sans","sans-serif"] },
+          fontSize: {
+            "display-lg": ["72px",{lineHeight:"1.1",letterSpacing:"-0.02em",fontWeight:"700"}],
+            "display-lg-mobile": ["48px",{lineHeight:"1.1",fontWeight:"700"}],
+            "headline-lg": ["40px",{lineHeight:"1.2",fontWeight:"700"}],
+            "headline-md": ["32px",{lineHeight:"1.2",fontWeight:"600"}],
+            "subhead-lg": ["24px",{lineHeight:"1.3",fontWeight:"600"}],
+            "body-lg": ["18px",{lineHeight:"1.6",fontWeight:"400"}],
+            "body-md": ["16px",{lineHeight:"1.6",fontWeight:"400"}],
+            "label-bold": ["14px",{lineHeight:"1.2",letterSpacing:"0.05em",fontWeight:"700"}],
+            "label-sm": ["12px",{lineHeight:"1.2",letterSpacing:"0.03em",fontWeight:"500"}]
+          }
+        }
+      }
+    }
+  </script>
+  <style>.material-symbols-outlined { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }</style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased">
+
+<!-- NAV -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-sm border-b-2 border-outline-variant shadow-sm">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+    <a href="index.html" class="font-headline text-2xl font-bold text-primary tracking-tight">Whyte Contracting LLC</a>
+    <nav class="hidden md:flex items-center space-x-8">
+      <a href="index.html" class="font-label text-label-bold text-on-surface-variant hover:text-primary transition-colors">Home</a>
+      <a href="about.html" class="font-label text-label-bold text-primary border-b-2 border-primary pb-0.5">About</a>
+      <a href="services.html" class="font-label text-label-bold text-on-surface-variant hover:text-primary transition-colors">Services</a>
+      <a href="products.html" class="font-label text-label-bold text-on-surface-variant hover:text-primary transition-colors">Products</a>
+      <a href="gallery.html" class="font-label text-label-bold text-on-surface-variant hover:text-primary transition-colors">Gallery</a>
+      <a href="contact.html" class="font-label text-label-bold text-on-surface-variant hover:text-primary transition-colors">Contact</a>
+    </nav>
+    <a href="contact.html" class="hidden lg:inline-flex items-center gap-2 px-6 py-2.5 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#32302b] transition-all">Request a Quote</a>
+    <button id="menu-btn" class="md:hidden text-primary p-1"><span class="material-symbols-outlined text-3xl">menu</span></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-outline-variant px-6 py-6 flex flex-col gap-5">
+    <a href="index.html" class="font-label text-label-bold text-on-surface-variant">Home</a>
+    <a href="about.html" class="font-label text-label-bold text-primary">About</a>
+    <a href="services.html" class="font-label text-label-bold text-on-surface-variant">Services</a>
+    <a href="products.html" class="font-label text-label-bold text-on-surface-variant">Products</a>
+    <a href="gallery.html" class="font-label text-label-bold text-on-surface-variant">Gallery</a>
+    <a href="contact.html" class="font-label text-label-bold text-on-surface-variant">Contact</a>
+    <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b]">Request a Quote</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="pt-20 bg-surface">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12 py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="font-label text-label-bold text-secondary uppercase tracking-widest">Our Story</span>
+        <h1 class="font-display text-display-lg-mobile md:text-headline-lg lg:text-display-lg-mobile text-primary mt-2 mb-6 leading-tight">Built on Hard Work.<br>Driven by Reliability.</h1>
+        <p class="font-body text-body-lg text-on-surface-variant leading-relaxed">Providing top-tier contracting and material hauling services across New York, built on a foundation of integrity and operational excellence.</p>
+      </div>
+      <div class="relative rounded-lg overflow-hidden border-2 border-outline-variant shadow-[6px_6px_0px_#897172]">
+        <img src="./images/fleet.png" alt="Whyte Contracting fleet of dump trucks lined up at dawn" class="w-full h-80 object-cover">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-tertiary/80 to-transparent p-4">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-secondary">location_on</span>
+            <span class="font-label text-label-bold text-white uppercase tracking-widest">Copiague, NY — Founded with Purpose</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR FOUNDATION -->
+<section class="py-20 bg-surface-container-low border-y border-outline-variant">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+    <div class="text-center mb-12">
+      <span class="font-label text-label-bold text-secondary uppercase tracking-widest">Who We Are</span>
+      <h2 class="font-headline text-headline-lg text-primary mt-2">Our Foundation</h2>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <div class="space-y-6 font-body text-body-lg text-on-surface-variant leading-relaxed">
+        <p>Whyte Contracting LLC is a veteran-owned and operated hauling and contracting business based in Copiague, NY. We specialize in the safe, efficient, and reliable transportation of essential construction materials — including sand, stone, asphalt, and millings.</p>
+        <p>Our commitment to excellence is reflected in our rigorous maintenance standards, our highly trained operators, and our unwavering adherence to regulations. We don't just move materials — we hold partnerships based on trust and performance.</p>
+        <p>Every job we take on is treated with the same standard of care, whether it's a single residential delivery or a multi-phase municipal infrastructure project.</p>
+      </div>
+      <div class="relative rounded-lg overflow-hidden border-2 border-outline-variant shadow-[4px_4px_0px_#897172]">
+        <img src="./images/supervisor.png" alt="Whyte Contracting site supervisor reviewing plans on-site" class="w-full h-80 object-cover">
+        <!-- Pull Quote Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-tertiary/90 via-tertiary/40 to-transparent flex items-end">
+          <div class="p-8">
+            <p class="font-headline text-xl text-on-tertiary leading-snug mb-3">"Integrity isn't just a word; it's the bedrock of every load we haul and every project we touch."</p>
+            <p class="font-label text-label-bold text-secondary uppercase tracking-widest">John Whyte — Founder & Director, U.S. Army</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="py-20 bg-surface">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+    <div class="text-center mb-12">
+      <span class="font-label text-label-bold text-secondary uppercase tracking-widest">Credentials</span>
+      <h2 class="font-headline text-headline-lg text-primary mt-2">Certified Reliability</h2>
+      <p class="font-body text-body-md text-on-surface-variant mt-2">Recognized for our standards and service.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      <div class="flex items-start gap-5 p-8 bg-surface-container rounded-lg border-2 border-secondary shadow-[3px_3px_0px_#897172]">
+        <span class="material-symbols-outlined text-secondary text-4xl shrink-0">workspace_premium</span>
+        <div>
+          <h3 class="font-headline text-subhead-lg text-primary mb-2">DBE Certified</h3>
+          <p class="font-body text-body-md text-on-surface-variant">Certified Disadvantaged Business Enterprise, enabling participation in state, municipal, and federally-funded infrastructure projects.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-5 p-8 bg-surface-container rounded-lg border-2 border-secondary shadow-[3px_3px_0px_#897172]">
+        <span class="material-symbols-outlined text-secondary text-4xl shrink-0">military_tech</span>
+        <div>
+          <h3 class="font-headline text-subhead-lg text-primary mb-2">Veteran Operated</h3>
+          <p class="font-body text-body-md text-on-surface-variant">Proudly founded and operated by a U.S. military veteran — bringing military-grade discipline, structure, and mission focus to every project.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION / VISION / VALUES -->
+<section class="py-20 bg-surface-container border-y border-outline-variant">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Mission -->
+      <div class="bg-surface rounded-lg border border-outline-variant p-8 shadow-sm">
+        <div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-5 border border-secondary">
+          <span class="material-symbols-outlined text-secondary">flag</span>
+        </div>
+        <h3 class="font-headline text-subhead-lg text-primary mb-4">Mission</h3>
+        <p class="font-body text-body-md text-on-surface-variant leading-relaxed">To provide construction transportation and material supply services to the greater New York area that places honoring honesty and trust above all.</p>
+      </div>
+      <!-- Vision -->
+      <div class="bg-surface rounded-lg border border-outline-variant p-8 shadow-sm">
+        <div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-5 border border-secondary">
+          <span class="material-symbols-outlined text-secondary">visibility</span>
+        </div>
+        <h3 class="font-headline text-subhead-lg text-primary mb-4">Vision</h3>
+        <p class="font-body text-body-md text-on-surface-variant leading-relaxed">To be the premier heavy-haul logistics firm in New York, known for quality, safety, owner-driven reliability, and trusted leadership in our industry.</p>
+      </div>
+      <!-- Values -->
+      <div class="bg-primary rounded-lg p-8 shadow-[4px_4px_0px_#32302b]">
+        <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-5">
+          <span class="material-symbols-outlined text-on-secondary">diamond</span>
+        </div>
+        <h3 class="font-headline text-subhead-lg text-on-primary mb-4">Values</h3>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-2 font-label text-label-bold text-on-primary/90"><span class="material-symbols-outlined text-secondary text-base">check_circle</span>Integrity First</li>
+          <li class="flex items-center gap-2 font-label text-label-bold text-on-primary/90"><span class="material-symbols-outlined text-secondary text-base">check_circle</span>Operational Rigor</li>
+          <li class="flex items-center gap-2 font-label text-label-bold text-on-primary/90"><span class="material-symbols-outlined text-secondary text-base">check_circle</span>Punctual Delivery</li>
+          <li class="flex items-center gap-2 font-label text-label-bold text-on-primary/90"><span class="material-symbols-outlined text-secondary text-base">check_circle</span>Veteran Discipline</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="py-20 bg-tertiary border-t-4 border-secondary">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="font-headline text-5xl font-bold text-secondary">10K+</div>
+        <p class="font-label text-label-sm text-on-tertiary/70 uppercase tracking-widest mt-2">Tons Hauled</p>
+      </div>
+      <div>
+        <div class="font-headline text-5xl font-bold text-secondary">100%</div>
+        <p class="font-label text-label-sm text-on-tertiary/70 uppercase tracking-widest mt-2">Safety Record</p>
+      </div>
+      <div>
+        <div class="font-headline text-5xl font-bold text-secondary">15+</div>
+        <p class="font-label text-label-sm text-on-tertiary/70 uppercase tracking-widest mt-2">Fleet Vehicles</p>
+      </div>
+      <div>
+        <div class="font-headline text-5xl font-bold text-secondary">20+</div>
+        <p class="font-label text-label-sm text-on-tertiary/70 uppercase tracking-widest mt-2">Years Experience</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM PHOTO -->
+<section class="relative h-72 md:h-96 overflow-hidden">
+  <img src="./images/supervisor.png" alt="Whyte Contracting team supervisor on job site" class="w-full h-full object-cover">
+  <div class="absolute inset-0 bg-primary/70 flex items-center justify-center">
+    <div class="text-center px-6">
+      <h2 class="font-headline text-headline-md md:text-headline-lg text-on-primary mb-4">"We Show Up. We Deliver. Every Time."</h2>
+      <p class="font-body text-body-lg text-on-primary/80 max-w-xl">Our drivers and operators are the backbone of this operation — skilled, safety-conscious, and proud of the work they do.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 bg-surface border-t border-outline-variant">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12 text-center">
+    <span class="font-label text-label-bold text-secondary uppercase tracking-widest">Partner With Us</span>
+    <h2 class="font-headline text-headline-lg text-primary mt-2 mb-4">Ready to move forward?</h2>
+    <p class="font-body text-body-lg text-on-surface-variant max-w-xl mx-auto mb-10">Let's discuss how Whyte Contracting can support your next major project. We're ready to mobilize.</p>
+    <a href="contact.html" class="inline-flex items-center gap-2 px-10 py-4 bg-primary text-on-primary font-label text-label-bold text-base rounded shadow-[4px_4px_0px_#32302b] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#32302b] transition-all">
+      <span class="material-symbols-outlined">send</span> Request a Quote
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-tertiary text-on-tertiary border-t-4 border-secondary">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-12 py-16 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="md:col-span-2">
+      <div class="font-headline text-xl font-bold text-on-tertiary mb-4">Whyte Contracting LLC</div>
+      <p class="font-body text-sm text-on-tertiary/80 max-w-sm mb-6 leading-relaxed">Industrial-grade hauling and material supply services across Long Island, NY. DBE Certified & Veteran Operated.</p>
+      <div class="flex items-center gap-3">
+        <a href="tel:+16319330772" class="font-label text-label-bold text-secondary hover:text-on-tertiary transition-colors">(631) 933-0772</a>
+        <span class="text-on-tertiary/30">·</span>
+        <a href="mailto:info@whytecontracting.com" class="font-label text-label-bold text-secondary hover:text-on-tertiary transition-colors">info@whytecontracting.com</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-label text-label-bold text-secondary mb-5 uppercase tracking-wider text-xs">Quick Links</h4>
+      <div class="flex flex-col space-y-3">
+        <a href="index.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">Home</a>
+        <a href="about.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">About Us</a>
+        <a href="services.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">Services</a>
+        <a href="products.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">Products</a>
+        <a href="gallery.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">Gallery</a>
+        <a href="careers.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">Careers</a>
+        <a href="contact.html" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all">Contact</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-label text-label-bold text-secondary mb-5 uppercase tracking-wider text-xs">Contact</h4>
+      <div class="flex flex-col space-y-3">
+        <div class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-base mt-0.5">call</span><a href="tel:+16319330772" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary">(631) 933-0772</a></div>
+        <div class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-base mt-0.5">mail</span><a href="mailto:info@whytecontracting.com" class="font-body text-sm text-on-tertiary/80 hover:text-on-tertiary">info@whytecontracting.com</a></div>
+        <div class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-base mt-0.5">location_on</span><span class="font-body text-sm text-on-tertiary/80">P.O. Box 116, Copiague, NY 11726</span></div>
+        <div class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-base mt-0.5">schedule</span><span class="font-body text-sm text-on-tertiary/80">Mon–Fri 6AM–5PM · Sat 7AM–1PM</span></div>
+      </div>
+    </div>
+    <div class="md:col-span-4 border-t border-on-tertiary/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="font-label text-label-sm text-on-tertiary/60">© 2025 Whyte Contracting LLC. Copiague, NY. All Rights Reserved.</p>
+      <div class="flex gap-6">
+        <span class="font-label text-xs text-secondary uppercase tracking-widest">DBE Certified</span>
+        <span class="font-label text-xs text-secondary uppercase tracking-widest">Veteran Operated</span>
+        <span class="font-label text-xs text-secondary uppercase tracking-widest">DOT Compliant</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menu-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+</script>
+</body>
+</html>
