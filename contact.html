@@ -76,12 +76,22 @@
               },
               "spacing": {},
               "fontFamily": {
-                      "headline": ["Vollkorn"],
-                      "display": ["Vollkorn"],
-                      "body": ["Merriweather"],
-                      "label": ["Plus Jakarta Sans"]
+                      "headline": ["Vollkorn", "serif"],
+                      "display": ["Vollkorn", "serif"],
+                      "body": ["Merriweather", "serif"],
+                      "label": ["Plus Jakarta Sans", "sans-serif"]
               },
-              "fontSize": {}
+              "fontSize": {
+                "display-lg": ["72px",{"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"700"}],
+                "display-lg-mobile": ["48px",{"lineHeight":"1.1","fontWeight":"700"}],
+                "headline-lg": ["40px",{"lineHeight":"1.2","fontWeight":"700"}],
+                "headline-md": ["32px",{"lineHeight":"1.2","fontWeight":"600"}],
+                "subhead-lg": ["24px",{"lineHeight":"1.3","fontWeight":"600"}],
+                "body-lg": ["18px",{"lineHeight":"1.6","fontWeight":"400"}],
+                "body-md": ["16px",{"lineHeight":"1.6","fontWeight":"400"}],
+                "label-bold": ["14px",{"lineHeight":"1.2","letterSpacing":"0.05em","fontWeight":"700"}],
+                "label-sm": ["12px",{"lineHeight":"1.2","letterSpacing":"0.03em","fontWeight":"500"}]
+              }
             },
           },
         }
@@ -356,5 +366,30 @@
     </div>
   </div>
 </footer>
-<script>document.getElementById('menu-btn').addEventListener('click',()=>document.getElementById('mobile-menu').classList.toggle('hidden'));</script>
+<script>
+  document.getElementById('menu-btn').addEventListener('click', () =>
+    document.getElementById('mobile-menu').classList.toggle('hidden'));
+
+  // Quote form — success state
+  document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('button[type="submit"]');
+    btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Request Received — We\'ll reach out shortly!';
+    btn.classList.replace('bg-primary', 'bg-secondary');
+    btn.classList.remove('hover:bg-primary-container');
+    btn.disabled = true;
+    btn.style.cursor = 'default';
+  });
+
+  // Service dropdown — show/hide material field
+  const serviceSelect = document.querySelector('select[required]');
+  const materialWrapper = serviceSelect?.closest('form')?.querySelector('select:not([required])')?.closest('div')?.parentElement;
+  if (serviceSelect && materialWrapper) {
+    function toggleMaterial() {
+      const needsMaterial = ['materials', 'site'].includes(serviceSelect.value);
+      materialWrapper.style.opacity = needsMaterial ? '1' : '0.5';
+    }
+    serviceSelect.addEventListener('change', toggleMaterial);
+  }
+</script>
 </body></html>
