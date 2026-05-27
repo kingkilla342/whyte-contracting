@@ -162,7 +162,11 @@
                     </h2>
 <p class="font-body text-on-surface-variant mt-2 text-sm">Provide project details below. Our dispatch team reviews inquiries hourly during normal operations.</p>
 </div>
-<form class="space-y-6">
+<form class="space-y-6" action="https://formsubmit.co/info@whytecontracting.com" method="POST">
+  <input type="hidden" name="_subject" value="New Quote Request — Whyte Contracting LLC">
+  <input type="hidden" name="_next" value="https://whyte-contracting.vercel.app/contact?sent=1">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div>
 <label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Full Name *</label>
@@ -370,16 +374,14 @@
   document.getElementById('menu-btn').addEventListener('click', () =>
     document.getElementById('mobile-menu').classList.toggle('hidden'));
 
-  // Quote form — success state
-  document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('button[type="submit"]');
-    btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Request Received — We\'ll reach out shortly!';
-    btn.classList.replace('bg-primary', 'bg-secondary');
-    btn.classList.remove('hover:bg-primary-container');
-    btn.disabled = true;
-    btn.style.cursor = 'default';
-  });
+  // Show success banner if redirected back after submission
+  if (new URLSearchParams(location.search).get('sent') === '1') {
+    const banner = document.createElement('div');
+    banner.className = 'fixed top-24 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 bg-secondary text-on-secondary font-label font-bold px-6 py-4 rounded shadow-[4px_4px_0px_#32302b] text-sm';
+    banner.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Quote request received — we\'ll be in touch shortly!';
+    document.body.appendChild(banner);
+    setTimeout(() => banner.remove(), 6000);
+  }
 
   // Service dropdown — show/hide material field
   const serviceSelect = document.querySelector('select[required]');

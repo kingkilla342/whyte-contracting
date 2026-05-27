@@ -234,7 +234,11 @@
 <div class="absolute top-0 left-0 w-full h-2 bg-primary"></div>
 <h2 class="font-headline text-3xl font-bold text-primary mb-2">Submit Your Application</h2>
 <p class="font-body text-on-surface-variant mb-8 text-sm">Fill out the form below to apply for a position. We review applications weekly.</p>
-<form class="space-y-6">
+<form class="space-y-6" action="https://formsubmit.co/info@whytecontracting.com" method="POST">
+  <input type="hidden" name="_subject" value="New Job Application — Whyte Contracting LLC">
+  <input type="hidden" name="_next" value="https://whyte-contracting.vercel.app/careers?sent=1">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div>
 <label class="block font-label text-label-bold text-on-surface mb-2" for="firstName">First Name</label>
@@ -324,14 +328,13 @@
     }
   });
 
-  // Form submission feedback
-  document.querySelector('#application-form form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('button[type="submit"]');
-    btn.textContent = '✓ Application Received — We\'ll be in touch!';
-    btn.classList.add('bg-secondary');
-    btn.classList.remove('bg-primary');
-    btn.disabled = true;
-  });
+  // Show success banner if redirected back after submission
+  if (new URLSearchParams(location.search).get('sent') === '1') {
+    const banner = document.createElement('div');
+    banner.className = 'fixed top-24 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 bg-secondary text-on-secondary font-label font-bold px-6 py-4 rounded shadow-[4px_4px_0px_#32302b] text-sm';
+    banner.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Application received — we review weekly and will be in touch!';
+    document.body.appendChild(banner);
+    setTimeout(() => banner.remove(), 7000);
+  }
 </script>
 </body></html>
