@@ -55,7 +55,10 @@
 <!-- NAV -->
 <header class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-sm border-b-2 border-outline-variant shadow-sm">
   <div class="max-w-[1280px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-    <a href="index.html" class="font-headline text-2xl font-bold text-primary tracking-tight">Whyte Contracting LLC</a>
+    <a href="index.html" class="flex items-center gap-3 font-headline text-2xl font-bold text-primary tracking-tight">
+  <img src="./images/logo.png" alt="Whyte Contracting LLC logo" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
+  <span>Whyte Contracting LLC</span>
+</a>
     <nav class="hidden md:flex items-center space-x-8">
       <a href="index.html" class="font-label text-label-bold text-on-surface-variant hover:text-primary transition-colors">Home</a>
       <a href="about.html" class="font-label text-label-bold text-on-surface-variant hover:text-primary transition-colors">About</a>
@@ -118,8 +121,12 @@
     <div id="grid-view" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Asphalt -->
       <div class="bg-surface-container rounded-lg border border-outline-variant overflow-hidden shadow-sm hover:shadow-[4px_4px_0px_#897172] hover:-translate-y-1 transition-all group">
-        <div class="h-48 overflow-hidden relative">
-          <img src="./images/hero-dump-truck.png" alt="Hot mix asphalt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        <div class="h-48 relative overflow-hidden" style="background: linear-gradient(135deg, #111 0%, #2a2a2a 50%, #1a1a1a 100%);">
+          <div class="absolute inset-0 opacity-20" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(255,255,255,.05) 3px, rgba(255,255,255,.05) 4px);"></div>
+          <div class="absolute inset-0 flex flex-col items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-5xl text-white/30" style="font-variation-settings:'FILL' 0">road</span>
+            <span class="font-label text-label-sm text-white/40 uppercase tracking-widest">Hot Mix Asphalt</span>
+          </div>
           <div class="absolute top-3 left-3"><span class="bg-primary text-on-primary font-label text-label-sm px-2 py-1 rounded-sm uppercase tracking-widest">Paving</span></div>
         </div>
         <div class="p-6">
@@ -133,10 +140,11 @@
       </div>
       <!-- Sand -->
       <div class="bg-surface-container rounded-lg border border-outline-variant overflow-hidden shadow-sm hover:shadow-[4px_4px_0px_#897172] hover:-translate-y-1 transition-all group">
-        <div class="h-48 overflow-hidden relative bg-[#d4b896] flex items-center justify-center">
-          <div class="text-center">
-            <span class="material-symbols-outlined text-6xl text-[#795900]/50">landscape</span>
-            <p class="font-label text-label-sm text-[#795900]/60 mt-2 uppercase tracking-widest">Industrial Sand</p>
+        <div class="h-48 relative overflow-hidden" style="background: linear-gradient(135deg, #d4a85c 0%, #e8c97a 40%, #c9923a 100%);">
+          <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 30% 70%, rgba(255,255,255,.3) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(255,220,100,.4) 0%, transparent 50%);"></div>
+          <div class="absolute inset-0 flex flex-col items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-5xl text-white/40" style="font-variation-settings:'FILL' 0">landscape</span>
+            <span class="font-label text-label-sm text-white/60 uppercase tracking-widest">Industrial Sand</span>
           </div>
           <div class="absolute top-3 left-3"><span class="bg-secondary text-on-secondary font-label text-label-sm px-2 py-1 rounded-sm uppercase tracking-widest">Backfill</span></div>
         </div>
@@ -151,8 +159,12 @@
       </div>
       <!-- Gravel -->
       <div class="bg-surface-container rounded-lg border border-outline-variant overflow-hidden shadow-sm hover:shadow-[4px_4px_0px_#897172] hover:-translate-y-1 transition-all group">
-        <div class="h-48 overflow-hidden relative">
-          <img src="./images/materials.png" alt="Crushed gravel stockpile" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        <div class="h-48 relative overflow-hidden" style="background: linear-gradient(135deg, #6b6b6b 0%, #8a8a7e 40%, #555 100%);">
+          <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle 2px at 20% 30%, rgba(255,255,255,.6) 0%, transparent 100%), radial-gradient(circle 2px at 60% 60%, rgba(255,255,255,.4) 0%, transparent 100%), radial-gradient(circle 3px at 80% 20%, rgba(255,255,255,.5) 0%, transparent 100%);"></div>
+          <div class="absolute inset-0 flex flex-col items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-5xl text-white/30" style="font-variation-settings:'FILL' 0">category</span>
+            <span class="font-label text-label-sm text-white/50 uppercase tracking-widest">Crushed Gravel</span>
+          </div>
           <div class="absolute top-3 left-3"><span class="bg-tertiary text-on-tertiary font-label text-label-sm px-2 py-1 rounded-sm uppercase tracking-widest">Base Course</span></div>
         </div>
         <div class="p-6">
@@ -166,10 +178,11 @@
       </div>
       <!-- Bluestone -->
       <div class="bg-surface-container rounded-lg border border-outline-variant overflow-hidden shadow-sm hover:shadow-[4px_4px_0px_#897172] hover:-translate-y-1 transition-all group">
-        <div class="h-48 overflow-hidden relative bg-[#8899aa] flex items-center justify-center">
-          <div class="text-center">
-            <span class="material-symbols-outlined text-6xl text-white/30">hexagon</span>
-            <p class="font-label text-label-sm text-white/60 mt-2 uppercase tracking-widest">Bluestone</p>
+        <div class="h-48 relative overflow-hidden" style="background: linear-gradient(135deg, #3a5068 0%, #5c7a94 40%, #2a4055 100%);">
+          <div class="absolute inset-0 opacity-20" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 8px, rgba(255,255,255,.05) 8px, rgba(255,255,255,.05) 9px);"></div>
+          <div class="absolute inset-0 flex flex-col items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-5xl text-white/30" style="font-variation-settings:'FILL' 0">hexagon</span>
+            <span class="font-label text-label-sm text-white/50 uppercase tracking-widest">Pennsylvania Bluestone</span>
           </div>
           <div class="absolute top-3 left-3"><span class="bg-[#2b3a4a] text-white font-label text-label-sm px-2 py-1 rounded-sm uppercase tracking-widest">Decorative</span></div>
         </div>
@@ -184,10 +197,11 @@
       </div>
       <!-- Topsoil -->
       <div class="bg-surface-container rounded-lg border border-outline-variant overflow-hidden shadow-sm hover:shadow-[4px_4px_0px_#897172] hover:-translate-y-1 transition-all group">
-        <div class="h-48 overflow-hidden relative bg-[#5c4a2a] flex items-center justify-center">
-          <div class="text-center">
-            <span class="material-symbols-outlined text-6xl text-[#fdce6a]/40">eco</span>
-            <p class="font-label text-label-sm text-[#fdce6a]/60 mt-2 uppercase tracking-widest">Screened Topsoil</p>
+        <div class="h-48 relative overflow-hidden" style="background: linear-gradient(135deg, #3d2b0e 0%, #6b4423 40%, #4a3010 100%);">
+          <div class="absolute inset-0 opacity-25" style="background-image: radial-gradient(ellipse at 50% 100%, rgba(100,60,10,.8) 0%, transparent 70%);"></div>
+          <div class="absolute inset-0 flex flex-col items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-5xl text-[#fdce6a]/40" style="font-variation-settings:'FILL' 0">eco</span>
+            <span class="font-label text-label-sm text-[#fdce6a]/60 uppercase tracking-widest">Screened Topsoil</span>
           </div>
           <div class="absolute top-3 left-3"><span class="bg-secondary text-on-secondary font-label text-label-sm px-2 py-1 rounded-sm uppercase tracking-widest">Landscaping</span></div>
         </div>
@@ -202,10 +216,11 @@
       </div>
       <!-- RCA -->
       <div class="bg-surface-container rounded-lg border border-outline-variant overflow-hidden shadow-sm hover:shadow-[4px_4px_0px_#897172] hover:-translate-y-1 transition-all group">
-        <div class="h-48 overflow-hidden relative bg-[#8a8a80] flex items-center justify-center">
-          <div class="text-center">
-            <span class="material-symbols-outlined text-6xl text-white/30">recycling</span>
-            <p class="font-label text-label-sm text-white/60 mt-2 uppercase tracking-widest">RCA / Fill Stone</p>
+        <div class="h-48 relative overflow-hidden" style="background: linear-gradient(135deg, #707070 0%, #9a9a90 40%, #5a5a55 100%);">
+          <div class="absolute inset-0 opacity-15" style="background-image: repeating-linear-gradient(90deg, transparent, transparent 12px, rgba(255,255,255,.04) 12px, rgba(255,255,255,.04) 13px);"></div>
+          <div class="absolute inset-0 flex flex-col items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-5xl text-white/30" style="font-variation-settings:'FILL' 0">recycling</span>
+            <span class="font-label text-label-sm text-white/50 uppercase tracking-widest">Recycled Concrete</span>
           </div>
           <div class="absolute top-3 left-3"><span class="bg-outline text-white font-label text-label-sm px-2 py-1 rounded-sm uppercase tracking-widest">Reclaimed</span></div>
         </div>
@@ -223,32 +238,32 @@
     <!-- List View (hidden by default) -->
     <div id="list-view" class="hidden space-y-4">
       <div class="bg-surface-container rounded-lg border border-outline-variant p-6 flex flex-col md:flex-row md:items-center gap-4 hover:shadow-[4px_4px_0px_#897172] transition-all">
-        <div class="w-full md:w-24 h-24 rounded overflow-hidden shrink-0"><img src="./images/hero-dump-truck.png" alt="Asphalt" class="w-full h-full object-cover"></div>
+        <div class="w-full md:w-24 h-24 rounded overflow-hidden shrink-0 flex items-center justify-center" style="background:linear-gradient(135deg,#111 0%,#2a2a2a 100%)"><span class="material-symbols-outlined text-2xl text-white/30" style="font-variation-settings:'FILL' 0">road</span></div>
         <div class="flex-1"><h3 class="font-headline text-subhead-lg text-primary mb-1">Asphalt</h3><p class="font-body text-sm text-on-surface-variant">Hot mix asphalt for road paving, parking lots, and driveways. Standard and polymer-modified mixes available.</p><span class="font-label text-label-sm text-secondary mt-2 inline-block">Sold by Ton · Paving</span></div>
         <a href="contact.html" class="shrink-0 inline-flex items-center gap-1 px-6 py-3 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] transition-all">Quote</a>
       </div>
       <div class="bg-surface-container rounded-lg border border-outline-variant p-6 flex flex-col md:flex-row md:items-center gap-4 hover:shadow-[4px_4px_0px_#897172] transition-all">
-        <div class="w-full md:w-24 h-24 rounded overflow-hidden shrink-0 bg-[#d4b896] flex items-center justify-center"><span class="material-symbols-outlined text-3xl text-[#795900]/60">landscape</span></div>
+        <div class="w-full md:w-24 h-24 rounded overflow-hidden shrink-0 flex items-center justify-center" style="background:linear-gradient(135deg,#d4a85c 0%,#e8c97a 100%)"><span class="material-symbols-outlined text-2xl text-[#795900]/60" style="font-variation-settings:'FILL' 0">landscape</span></div>
         <div class="flex-1"><h3 class="font-headline text-subhead-lg text-primary mb-1">Sand</h3><p class="font-body text-sm text-on-surface-variant">Washed industrial sand for drainage, concrete mixing, and utility trench backfill.</p><span class="font-label text-label-sm text-secondary mt-2 inline-block">Sold by Yard / Ton · Backfill</span></div>
         <a href="contact.html" class="shrink-0 inline-flex items-center gap-1 px-6 py-3 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] transition-all">Quote</a>
       </div>
       <div class="bg-surface-container rounded-lg border border-outline-variant p-6 flex flex-col md:flex-row md:items-center gap-4 hover:shadow-[4px_4px_0px_#897172] transition-all">
-        <div class="w-full md:w-24 h-24 rounded overflow-hidden shrink-0"><img src="./images/materials.png" alt="Gravel" class="w-full h-full object-cover"></div>
+        <div class="w-full md:w-24 h-24 rounded overflow-hidden shrink-0 flex items-center justify-center" style="background:linear-gradient(135deg,#6b6b6b 0%,#8a8a7e 100%)"><span class="material-symbols-outlined text-2xl text-white/40" style="font-variation-settings:'FILL' 0">category</span></div>
         <div class="flex-1"><h3 class="font-headline text-subhead-lg text-primary mb-1">Gravel</h3><p class="font-body text-sm text-on-surface-variant">Crushed stone and processed gravel for road base, drainage, and foundation.</p><span class="font-label text-label-sm text-secondary mt-2 inline-block">Sold by Ton · Base Course</span></div>
         <a href="contact.html" class="shrink-0 inline-flex items-center gap-1 px-6 py-3 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] transition-all">Quote</a>
       </div>
       <div class="bg-surface-container rounded-lg border border-outline-variant p-6 flex flex-col md:flex-row md:items-center gap-4 hover:shadow-[4px_4px_0px_#897172] transition-all">
-        <div class="w-full md:w-24 h-24 rounded overflow-hidden shrink-0 bg-[#8899aa] flex items-center justify-center"><span class="material-symbols-outlined text-3xl text-white/40">hexagon</span></div>
+        <div class="w-full md:w-24 h-24 rounded overflow-hidden shrink-0 flex items-center justify-center" style="background:linear-gradient(135deg,#3a5068 0%,#5c7a94 100%)"><span class="material-symbols-outlined text-2xl text-white/40" style="font-variation-settings:'FILL' 0">hexagon</span></div>
         <div class="flex-1"><h3 class="font-headline text-subhead-lg text-primary mb-1">Bluestone</h3><p class="font-body text-sm text-on-surface-variant">Premium Pennsylvania bluestone for walkways and patio applications.</p><span class="font-label text-label-sm text-secondary mt-2 inline-block">Sold by Ton / SF · Decorative</span></div>
         <a href="contact.html" class="shrink-0 inline-flex items-center gap-1 px-6 py-3 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] transition-all">Quote</a>
       </div>
       <div class="bg-surface-container rounded-lg border border-outline-variant p-6 flex flex-col md:flex-row md:items-center gap-4 hover:shadow-[4px_4px_0px_#897172] transition-all">
-        <div class="w-full md:w-24 h-24 rounded overflow-hidden shrink-0 bg-[#5c4a2a] flex items-center justify-center"><span class="material-symbols-outlined text-3xl text-[#fdce6a]/50">eco</span></div>
+        <div class="w-full md:w-24 h-24 rounded overflow-hidden shrink-0 flex items-center justify-center" style="background:linear-gradient(135deg,#3d2b0e 0%,#6b4423 100%)"><span class="material-symbols-outlined text-2xl text-[#fdce6a]/50" style="font-variation-settings:'FILL' 0">eco</span></div>
         <div class="flex-1"><h3 class="font-headline text-subhead-lg text-primary mb-1">Topsoil</h3><p class="font-body text-sm text-on-surface-variant">Screened premium topsoil for grading, seeding, and landscaping.</p><span class="font-label text-label-sm text-secondary mt-2 inline-block">Sold by Yard · Landscaping</span></div>
         <a href="contact.html" class="shrink-0 inline-flex items-center gap-1 px-6 py-3 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] transition-all">Quote</a>
       </div>
       <div class="bg-surface-container rounded-lg border border-outline-variant p-6 flex flex-col md:flex-row md:items-center gap-4 hover:shadow-[4px_4px_0px_#897172] transition-all">
-        <div class="w-full md:w-24 h-24 rounded overflow-hidden shrink-0 bg-[#8a8a80] flex items-center justify-center"><span class="material-symbols-outlined text-3xl text-white/40">recycling</span></div>
+        <div class="w-full md:w-24 h-24 rounded overflow-hidden shrink-0 flex items-center justify-center" style="background:linear-gradient(135deg,#707070 0%,#9a9a90 100%)"><span class="material-symbols-outlined text-2xl text-white/40" style="font-variation-settings:'FILL' 0">recycling</span></div>
         <div class="flex-1"><h3 class="font-headline text-subhead-lg text-primary mb-1">RCA / Fill Stone</h3><p class="font-body text-sm text-on-surface-variant">Recycled concrete aggregate — cost-effective subbase for permitted projects.</p><span class="font-label text-label-sm text-secondary mt-2 inline-block">Sold by Ton · Reclaimed</span></div>
         <a href="contact.html" class="shrink-0 inline-flex items-center gap-1 px-6 py-3 bg-primary text-on-primary font-label text-label-bold rounded shadow-[2px_2px_0px_#32302b] hover:translate-y-[1px] transition-all">Quote</a>
       </div>
@@ -298,11 +313,11 @@
     </div>
     <div class="md:col-span-4 border-t border-on-tertiary/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="font-label text-label-sm text-on-tertiary/60">© 2025 Whyte Contracting LLC. Copiague, NY. All Rights Reserved.</p>
-      <div class="flex gap-6">
-        <span class="font-label text-xs text-secondary uppercase tracking-widest">DBE Certified</span>
-        <span class="font-label text-xs text-secondary uppercase tracking-widest">Veteran Operated</span>
-        <span class="font-label text-xs text-secondary uppercase tracking-widest">DOT Compliant</span>
-      </div>
+        <div class="flex flex-wrap items-center gap-4">
+          <img src="./images/cert-dbe.png" alt="DBE Certified" class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
+          <img src="./images/cert-sdvob-orange.png" alt="NY Certified SDVOB" class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
+          <img src="./images/cert-sdvob-blue.png" alt="NY Certified SDVOB" class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
+        </div>
     </div>
   </div>
 </footer>
