@@ -4,6 +4,14 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Contact Us - Whyte Contracting LLC</title>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whyte-contracting.vercel.app/contact">
+  <meta property="og:title" content="Contact Us — Whyte Contracting LLC">
+  <meta property="og:description" content="Get a free quote for heavy-haul trucking or material supply in Long Island, NY. Call (631) 933-0772 or submit a request online.">
+  <meta property="og:image" content="https://whyte-contracting.vercel.app/images/truck-waterfront.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="./images/logo.png">
+  <link rel="apple-touch-icon" href="./images/logo.png">
 <!-- Fonts: Vollkorn (Headlines), Merriweather (Body), Plus Jakarta Sans (Labels) -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -102,7 +110,7 @@
 <nav class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-sm border-b-2 border-outline-variant shadow-sm">
   <div class="max-w-[1280px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
     <a href="index.html" class="flex items-center gap-3 font-headline text-2xl font-bold text-primary tracking-tight">
-      <img src="./images/logo.png" alt="Whyte Contracting LLC logo" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
+      <img src="./images/logo.png" alt="Whyte Contracting LLC logo" loading="lazy" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
       <span>Whyte Contracting LLC</span>
     </a>
     <div class="hidden md:flex items-center gap-8 font-label text-sm font-bold">
@@ -173,28 +181,28 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div>
 <label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Full Name *</label>
-<input class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="John Doe" required="" type="text"/>
+<input name="Full Name" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="John Doe" required="" type="text"/>
 </div>
 <div>
 <label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Company (Optional)</label>
-<input class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="Your Company Name" type="text"/>
+<input name="Company" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="Your Company Name" type="text"/>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div>
 <label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Phone Number *</label>
-<input class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="(555) 000-0000" required="" type="tel"/>
+<input name="Phone" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="(555) 000-0000" required="" type="tel"/>
 </div>
 <div>
 <label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Email Address *</label>
-<input class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="info@example.com" required="" type="email"/>
+<input name="Email" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="info@example.com" required="" type="email"/>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 bg-surface border border-outline-variant rounded-lg">
 <div>
 <label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Service Needed *</label>
 <div class="relative">
-<select class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body appearance-none focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm cursor-pointer pr-10" required="">
+<select name="Service Needed" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body appearance-none focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm cursor-pointer pr-10" required="">
 <option disabled="" selected="" value="">Select a Service</option>
 <option value="freight">Heavy Haul &amp; Freight</option>
 <option value="materials">Material Supply</option>
@@ -210,7 +218,7 @@
                                 <span class="text-xs text-on-surface-variant font-normal normal-case">(If applicable)</span>
 </label>
 <div class="relative">
-<select class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body appearance-none focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm cursor-pointer pr-10">
+<select name="Material Needed" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body appearance-none focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm cursor-pointer pr-10">
 <option disabled="" selected="" value="">Select Material</option>
 <option value="gravel">Crushed Gravel</option>
 <option value="sand">Industrial Sand</option>
@@ -226,20 +234,20 @@
 <label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Project Location</label>
 <div class="relative">
 <span class="material-symbols-outlined absolute left-3 top-3 text-outline">location_on</span>
-<input class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 pl-10 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="City, State or ZIP" type="text"/>
+<input name="Project Location" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 pl-10 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="City, State or ZIP" type="text"/>
 </div>
 </div>
 <div>
 <label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Est. Load Size / Tonnage</label>
 <div class="relative">
 <span class="material-symbols-outlined absolute left-3 top-3 text-outline">weight</span>
-<input class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 pl-10 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="e.g., 50 Tons, 3 Loads" type="text"/>
+<input name="Load Size / Tonnage" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 pl-10 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="e.g., 50 Tons, 3 Loads" type="text"/>
 </div>
 </div>
 </div>
 <div>
 <label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">How Did You Hear About Us?</label>
-<input class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="Referral, Search Engine, etc." type="text"/>
+<input name="How Did You Hear About Us" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="Referral, Search Engine, etc." type="text"/>
 </div>
 <div class="pt-4">
 <button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label font-bold text-base px-8 py-4 rounded-lg hover:bg-primary-container transition-all shadow-[4px_4px_0px_#32302b] active:translate-y-1 active:shadow-none" type="submit">

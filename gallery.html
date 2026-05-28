@@ -4,6 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Gallery — Whyte Contracting LLC</title>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whyte-contracting.vercel.app/gallery">
+  <meta property="og:title" content="Project Gallery — Whyte Contracting LLC">
+  <meta property="og:description" content="Visual record of Whyte Contracting's heavy-haul trucking and material supply work across Long Island, NY.">
+  <meta property="og:image" content="https://whyte-contracting.vercel.app/images/hero-dump-truck.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="./images/logo.png">
+  <link rel="apple-touch-icon" href="./images/logo.png">
   <meta name="description" content="Visual record of Whyte Contracting LLC's heavy-haul trucking and material supply work across Long Island, NY.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,7 +70,7 @@
 <header class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-sm border-b-2 border-outline-variant shadow-sm">
   <div class="max-w-[1280px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
     <a href="index.html" class="flex items-center gap-3 font-headline text-2xl font-bold text-primary tracking-tight">
-      <img src="./images/logo.png" alt="Whyte Contracting LLC logo" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
+      <img src="./images/logo.png" alt="Whyte Contracting LLC logo" loading="lazy" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
       <span>Whyte Contracting LLC</span>
     </a>
     <nav class="hidden md:flex items-center space-x-8">
@@ -112,39 +120,42 @@
 
       <!-- Bento Grid -->
       <div class="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] gap-4">
-        <div class="gallery-item col-span-2 row-span-2 rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="trucks" data-src="./images/hero-dump-truck.png" data-cap="Whyte Contracting premium burgundy dump truck — low-angle cinematic shot">
+        <div class="gallery-item col-span-2 row-span-2 rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="trucks" data-src="./images/truck-real.jpg" data-cap="Whyte Contracting dump truck — real job site, Long Island NY">
           <div class="absolute inset-0 bg-inverse-surface/10 group-hover:bg-transparent transition-colors z-10"></div>
-          <img alt="Premium burgundy dump truck at golden hour" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/hero-dump-truck.png">
+          <img alt="Whyte Contracting dump truck on Long Island — real job site photo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/truck-real.jpg">
+          <div class="absolute top-3 left-3 z-20">
+            <span class="bg-secondary text-on-secondary font-label text-label-sm px-2 py-1 rounded-sm uppercase tracking-widest">Real Job Site</span>
+          </div>
           <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
-            <span class="font-label text-label-sm text-white uppercase tracking-widest">Dump Truck Operations</span>
+            <span class="font-label text-label-sm text-white uppercase tracking-widest">Whyte Contracting — Active Haul</span>
           </div>
         </div>
         <div class="gallery-item rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="materials" data-src="./images/materials.png" data-cap="Large-scale construction materials stockpile — gravel and crushed stone">
-          <img alt="Construction materials stockpile" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/materials.png">
+          <img alt="Construction materials stockpile" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/materials.png">
           <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
             <span class="font-label text-label-sm text-white uppercase tracking-widest">Materials</span>
           </div>
         </div>
         <div class="gallery-item rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="fleet" data-src="./images/fleet.png" data-cap="Whyte Contracting fleet of burgundy dump trucks lined up at dawn">
-          <img alt="Fleet of dump trucks at dawn" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/fleet.png">
+          <img alt="Fleet of dump trucks at dawn" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/fleet.png">
           <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
             <span class="font-label text-label-sm text-white uppercase tracking-widest">Our Fleet</span>
           </div>
         </div>
         <div class="gallery-item col-span-2 rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="trucks" data-src="./images/truck-waterfront.png" data-cap="Burgundy dump truck on Long Island waterfront infrastructure job">
-          <img alt="Dump truck on Long Island waterfront construction site" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/truck-waterfront.png">
+          <img alt="Dump truck on Long Island waterfront construction site" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/truck-waterfront.png">
           <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
             <span class="font-label text-label-sm text-white uppercase tracking-widest">Waterfront Infrastructure Job</span>
           </div>
         </div>
         <div class="gallery-item rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="site" data-src="./images/supervisor.png" data-cap="Whyte Contracting site supervisor reviewing project plans on-site">
-          <img alt="Site supervisor reviewing plans" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/supervisor.png">
+          <img alt="Site supervisor reviewing plans" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/supervisor.png">
           <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
             <span class="font-label text-label-sm text-white uppercase tracking-widest">Site Operations</span>
           </div>
         </div>
         <div class="gallery-item rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="trucks" data-src="./images/hero-ai.png" data-cap="AI-generated cinematic: heavy-duty dump truck at dusk on a Long Island job site">
-          <img alt="Heavy-duty dump truck at dusk" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/hero-ai.png">
+          <img alt="Heavy-duty dump truck at dusk" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/hero-ai.png">
           <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
             <span class="font-label text-label-sm text-white uppercase tracking-widest">Heavy Haul</span>
           </div>
@@ -154,28 +165,28 @@
       <!-- Secondary Grid -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
         <div class="gallery-item aspect-square rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="materials" data-src="./images/materials.png" data-cap="Gravel and aggregate supply operation">
-          <img alt="Gravel aggregate" class="w-full h-full object-cover object-[center_30%] group-hover:scale-105 transition-transform duration-700" src="./images/materials.png">
+          <img alt="Gravel aggregate" loading="lazy" class="w-full h-full object-cover object-[center_30%] group-hover:scale-105 transition-transform duration-700" src="./images/materials.png">
         </div>
         <div class="gallery-item aspect-square rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="fleet" data-src="./images/fleet.png" data-cap="Fleet mobilizing at dawn for a Long Island job">
-          <img alt="Fleet mobilizing at dawn" class="w-full h-full object-cover object-[center_60%] group-hover:scale-105 transition-transform duration-700" src="./images/fleet.png">
+          <img alt="Fleet mobilizing at dawn" loading="lazy" class="w-full h-full object-cover object-[center_60%] group-hover:scale-105 transition-transform duration-700" src="./images/fleet.png">
         </div>
         <div class="gallery-item aspect-square rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="trucks" data-src="./images/truck-waterfront.png" data-cap="Dump truck on coastal infrastructure project">
-          <img alt="Dump truck on coastal job" class="w-full h-full object-cover object-[center_40%] group-hover:scale-105 transition-transform duration-700" src="./images/truck-waterfront.png">
+          <img alt="Dump truck on coastal job" loading="lazy" class="w-full h-full object-cover object-[center_40%] group-hover:scale-105 transition-transform duration-700" src="./images/truck-waterfront.png">
         </div>
         <div class="gallery-item aspect-square rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="site" data-src="./images/supervisor.png" data-cap="On-site logistics coordination">
-          <img alt="On-site coordination" class="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-700" src="./images/supervisor.png">
+          <img alt="On-site coordination" loading="lazy" class="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-700" src="./images/supervisor.png">
         </div>
         <div class="gallery-item aspect-square rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="trucks" data-src="./images/hero-dump-truck.png" data-cap="Dump truck hauling aggregate at golden hour">
-          <img alt="Dump truck at golden hour" class="w-full h-full object-cover object-[center_50%] group-hover:scale-105 transition-transform duration-700" src="./images/hero-dump-truck.png">
+          <img alt="Dump truck at golden hour" loading="lazy" class="w-full h-full object-cover object-[center_50%] group-hover:scale-105 transition-transform duration-700" src="./images/hero-dump-truck.png">
         </div>
         <div class="gallery-item aspect-square rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="trucks" data-src="./images/hero-ai.png" data-cap="Heavy haul at dusk — Long Island job site">
-          <img alt="Heavy haul dusk" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/hero-ai.png">
+          <img alt="Heavy haul dusk" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/hero-ai.png">
         </div>
         <div class="gallery-item aspect-square rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="fleet" data-src="./images/fleet.png" data-cap="Full fleet lineup — Whyte Contracting Long Island operations">
-          <img alt="Full fleet lineup" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" src="./images/fleet.png">
+          <img alt="Full fleet lineup" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" src="./images/fleet.png">
         </div>
         <div class="gallery-item aspect-square rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="materials" data-src="./images/materials.png" data-cap="Material supply — crushed stone and aggregate">
-          <img alt="Crushed stone aggregate supply" class="w-full h-full object-cover object-bottom group-hover:scale-105 transition-transform duration-700" src="./images/materials.png">
+          <img alt="Crushed stone aggregate supply" loading="lazy" class="w-full h-full object-cover object-bottom group-hover:scale-105 transition-transform duration-700" src="./images/materials.png">
         </div>
       </div>
     </div>
@@ -187,7 +198,7 @@
     <div class="max-w-[1280px] mx-auto px-4 md:px-12 relative z-10 text-center">
       <h2 class="font-display text-headline-lg text-on-tertiary mb-8">Watch Us Work</h2>
       <div class="max-w-4xl mx-auto aspect-video rounded-lg border-2 border-secondary bg-inverse-surface relative overflow-hidden group shadow-[8px_8px_0px_#1b1c19] cursor-pointer">
-        <img alt="Video thumbnail — Whyte Contracting fleet at dawn" class="w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-40 transition-all duration-700" src="./images/fleet.png">
+        <img alt="Video thumbnail — Whyte Contracting fleet at dawn" loading="lazy" class="w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-40 transition-all duration-700" src="./images/fleet.png">
         <div class="absolute inset-0 flex items-center justify-center">
           <div class="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center border-4 border-secondary backdrop-blur-sm group-hover:scale-110 group-hover:bg-primary transition-all duration-300 shadow-lg">
             <span class="material-symbols-outlined text-on-primary text-5xl ml-2" style="font-variation-settings:'FILL' 1">play_arrow</span>
@@ -217,14 +228,14 @@
         <a class="font-label text-label-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all uppercase tracking-widest" href="about.html">Veteran Operated</a>
         <a class="font-label text-label-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all uppercase tracking-widest" href="services.html">DOT Compliant</a>
         <a class="font-label text-label-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all uppercase tracking-widest" href="careers.html">Careers</a>
-        <a class="font-label text-label-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all uppercase tracking-widest" href="#">Privacy Policy</a>
+        <a class="font-label text-label-sm text-on-tertiary/80 hover:text-on-tertiary hover:underline decoration-secondary decoration-2 transition-all uppercase tracking-widest" href="privacy.html">Privacy Policy</a>
       </div>
     </div>
     <div class="col-span-1 md:col-span-4 flex flex-col md:flex-row justify-center items-center gap-4">
       <div class="flex flex-wrap items-center gap-4">
-        <img src="./images/cert-dbe.png" alt="DBE Certified" class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
-        <img src="./images/cert-sdvob-orange.png" alt="NY State Certified Service-Disabled Veteran-Owned Business" class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
-        <img src="./images/cert-sdvob-blue.png" alt="NY State Certified Service-Disabled Veteran-Owned Business" class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
+        <img src="./images/cert-dbe.png" alt="DBE Certified" loading="lazy" class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
+        <img src="./images/cert-sdvob-orange.png" alt="NY State Certified Service-Disabled Veteran-Owned Business" loading="lazy" class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
+        <img src="./images/cert-sdvob-blue.png" alt="NY State Certified Service-Disabled Veteran-Owned Business" loading="lazy" class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
       </div>
       <p class="text-sm text-on-tertiary/60 font-label">© 2025 Whyte Contracting LLC. Copiague, NY. All Rights Reserved.</p>
     </div>
