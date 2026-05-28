@@ -316,7 +316,13 @@
     </div>
   </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
+  // ── Supabase config — same values as contact.html ──
+  const SUPABASE_URL      = 'https://YOUR_PROJECT_ID.supabase.co';
+  const SUPABASE_ANON_KEY = 'YOUR_ANON_KEY_HERE';
+  const _sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
   // Mobile menu
   document.getElementById('menu-btn').addEventListener('click', () =>
     document.getElementById('mobile-menu').classList.toggle('hidden'));
@@ -327,8 +333,7 @@
     if (select) {
       for (let i = 0; i < select.options.length; i++) {
         if (select.options[i].value === position || select.options[i].text === position) {
-          select.selectedIndex = i;
-          break;
+          select.selectedIndex = i; break;
         }
       }
     }
@@ -344,7 +349,23 @@
     }
   });
 
-  // Show success banner if redirected back after submission
+  // Intercept form — save to Supabase then hand off to FormSubmit for email
+  document.querySelector('#application-form form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const fd = new FormData(this);
+    try {
+      await _sb.from('job_applications').insert([{
+        first_name: fd.get('First Name'),
+        last_name:  fd.get('Last Name'),
+        email:      fd.get('Email'),
+        position:   fd.get('Position'),
+        resume_filename: fd.get('resume')?.name || null
+      }]);
+    } catch(err) { console.warn('Supabase insert failed:', err); }
+    this.submit(); // FormSubmit sends the email + handles resume
+  });
+
+  // Success banner
   if (new URLSearchParams(location.search).get('sent') === '1') {
     const banner = document.createElement('div');
     banner.className = 'fixed top-24 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 bg-secondary text-on-secondary font-label font-bold px-6 py-4 rounded shadow-[4px_4px_0px_#32302b] text-sm';
