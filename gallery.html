@@ -113,50 +113,41 @@
       <div class="flex flex-wrap items-center justify-center gap-3 mb-10">
         <button class="filter-btn active-filter px-5 py-2 rounded border-2 border-primary bg-primary text-on-primary font-label text-label-bold transition-all shadow-[2px_2px_0px_#32302b]" data-filter="all">All</button>
         <button class="filter-btn px-5 py-2 rounded border-2 border-outline-variant text-on-surface-variant hover:border-outline hover:text-on-surface font-label text-label-bold transition-all" data-filter="trucks">Dump Truck Jobs</button>
-        <button class="filter-btn px-5 py-2 rounded border-2 border-outline-variant text-on-surface-variant hover:border-outline hover:text-on-surface font-label text-label-bold transition-all" data-filter="materials">Material Delivery</button>
         <button class="filter-btn px-5 py-2 rounded border-2 border-outline-variant text-on-surface-variant hover:border-outline hover:text-on-surface font-label text-label-bold transition-all" data-filter="fleet">Fleet</button>
-        <button class="filter-btn px-5 py-2 rounded border-2 border-outline-variant text-on-surface-variant hover:border-outline hover:text-on-surface font-label text-label-bold transition-all" data-filter="site">Job Sites</button>
       </div>
 
       <!-- Bento Grid -->
       <div class="grid grid-cols-2 md:grid-cols-4 auto-rows-[220px] gap-4">
-        <!-- Hero: real truck side view -->
-        <div class="gallery-item col-span-2 row-span-2 rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="trucks" data-src="./images/truck-real.jpg" data-cap="Whyte Contracting — Kenworth dump truck, Long Island NY">
+        <!-- Row 1–2: Hero fleet shot -->
+        <div class="gallery-item col-span-2 row-span-2 rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="fleet" data-src="./images/truck-real.jpg" data-cap="Whyte Contracting — Kenworth dump truck, Long Island NY">
           <img alt="Whyte Contracting Kenworth dump truck" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/truck-real.jpg" loading="lazy">
           <div class="absolute top-3 left-3 z-20"><span class="bg-secondary text-on-secondary font-label text-label-sm px-2 py-1 rounded-sm uppercase tracking-widest">Our Fleet</span></div>
           <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity"><span class="font-label text-label-sm text-white uppercase tracking-widest">Active Haul — Long Island</span></div>
         </div>
-        <!-- Fleet at dawn AI -->
-        <div class="gallery-item rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="fleet" data-src="./images/fleet.png" data-cap="Whyte Contracting fleet at dawn">
-          <img alt="Dump truck fleet at dawn" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/fleet.png" loading="lazy">
-        </div>
-        <!-- Materials -->
-        <div class="gallery-item rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="materials" data-src="./images/materials.png" data-cap="Construction materials stockpile — gravel and crushed stone">
-          <img alt="Construction materials stockpile" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/materials.png" loading="lazy">
-        </div>
-        <!-- Waterfront truck — wide -->
-        <div class="gallery-item col-span-2 rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="trucks" data-src="./images/truck-waterfront.png" data-cap="Whyte Contracting dump truck on Long Island waterfront job site">
-          <img alt="Dump truck on Long Island waterfront site" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/truck-waterfront.png" loading="lazy">
-        </div>
-        <!-- AI hero dump truck -->
-        <div class="gallery-item rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="trucks" data-src="./images/hero-dump-truck.png" data-cap="Cinematic low-angle dump truck at golden hour">
-          <img alt="Dump truck at golden hour" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/hero-dump-truck.png" loading="lazy">
-        </div>
-        <!-- Site supervisor -->
-        <div class="gallery-item rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="site" data-src="./images/supervisor.png" data-cap="Whyte Contracting site supervisor on active job">
-          <img alt="Site supervisor on active job" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/supervisor.png" loading="lazy">
-        </div>
-        <!-- Real: truck dumping material at job site -->
+        <!-- Row 1: Kenworth dumping at job site -->
         <div class="gallery-item col-span-2 rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="trucks" data-src="./images/truck1.jpg" data-cap="Whyte Contracting — material dump at active Long Island job site">
           <img alt="Kenworth dump truck unloading material at job site" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/truck1.jpg" loading="lazy">
           <div class="absolute top-3 left-3 z-20"><span class="bg-primary text-on-primary font-label text-label-sm px-2 py-1 rounded-sm uppercase tracking-widest">Job Site</span></div>
         </div>
-        <!-- Real: two trucks parked — fleet shot -->
-        <div class="gallery-item rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="fleet" data-src="./images/truck2.jpg" data-cap="Whyte Contracting fleet — yellow and charcoal Kenworth dump trucks">
+        <!-- Row 2: Dump truck dropping material -->
+        <div class="gallery-item col-span-2 rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="trucks" data-src="./images/drop.webp" data-cap="Dump truck dropping material at residential job site">
+          <img alt="Dump truck dropping material at job site" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/drop.webp" loading="lazy">
+          <div class="absolute top-3 left-3 z-20"><span class="bg-primary text-on-primary font-label text-label-sm px-2 py-1 rounded-sm uppercase tracking-widest">Job Site</span></div>
+        </div>
+        <!-- Row 3: Materials stockpile -->
+        <div class="gallery-item col-span-2 rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="materials" data-src="./images/materials.png" data-cap="Construction materials stockpile — gravel and crushed stone">
+          <img alt="Construction materials stockpile" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/materials.png" loading="lazy">
+        </div>
+        <!-- Row 3: Truck unloading gravel -->
+        <div class="gallery-item col-span-2 rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="trucks" data-src="./images/dumping.jpg" data-cap="Dump truck unloading gravel aggregate at job site">
+          <img alt="Dump truck unloading gravel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/dumping.jpg" loading="lazy">
+        </div>
+        <!-- Row 4: Two Kenworths parked -->
+        <div class="gallery-item col-span-2 rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="fleet" data-src="./images/truck2.jpg" data-cap="Whyte Contracting fleet — yellow and charcoal Kenworth dump trucks">
           <img alt="Whyte Contracting Kenworth dump trucks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/truck2.jpg" loading="lazy">
         </div>
-        <!-- Real: fleet with logo on door -->
-        <div class="gallery-item rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="fleet" data-src="./images/fleet-real2.png" data-cap="Whyte Contracting fleet — branded trucks ready for dispatch">
+        <!-- Row 4: Branded fleet ready for dispatch -->
+        <div class="gallery-item col-span-2 rounded border border-outline-variant overflow-hidden relative group shadow-sm cursor-pointer" data-cat="fleet" data-src="./images/fleet-real2.png" data-cap="Whyte Contracting fleet — branded trucks ready for dispatch">
           <img alt="Whyte Contracting branded dump trucks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/fleet-real2.png" loading="lazy">
         </div>
       </div>
