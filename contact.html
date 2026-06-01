@@ -208,6 +208,7 @@
 <option value="materials">Material Supply</option>
 <option value="equipment">Equipment Transport</option>
 <option value="site">Site Preparation</option>
+<option value="other">Other</option>
 </select>
 <span class="material-symbols-outlined absolute right-3 top-3 text-outline pointer-events-none">arrow_drop_down</span>
 </div>
@@ -248,6 +249,10 @@
 <div>
 <label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">How Did You Hear About Us?</label>
 <input name="How Did You Hear About Us" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="Referral, Search Engine, etc." type="text"/>
+</div>
+<div>
+<label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Additional Notes</label>
+<textarea name="Additional Notes" rows="4" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm resize-none" placeholder="Any additional details about your project, timeline, special requirements, or questions..."></textarea>
 </div>
 <div class="pt-4">
 <button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label font-bold text-base px-8 py-4 rounded-lg hover:bg-primary-container transition-all shadow-[4px_4px_0px_#32302b] active:translate-y-1 active:shadow-none" type="submit">
@@ -411,7 +416,8 @@
         material:  fd.get('Material Needed'),
         location:  fd.get('Project Location'),
         load_size: fd.get('Load Size / Tonnage'),
-        referral:  fd.get('How Did You Hear About Us')
+        referral:  fd.get('How Did You Hear About Us'),
+        notes:     fd.get('Additional Notes')
       }]);
     } catch(err) { console.warn('Supabase insert failed:', err); }
     this.submit(); // FormSubmit sends the email
