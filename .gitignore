@@ -1,1 +1,23 @@
 .vercel
+
+# Environment variables
+.env
+.env.local
+.env.*
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Databases (SQLite / Local)
+*.db
+*.sqlite
+*.sqlite3
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System Files
+.DS_Store
+Thumbs.db
