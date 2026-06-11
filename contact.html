@@ -203,7 +203,7 @@
 </div>
 <div>
 <label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Email Address *</label>
-<input name="Email" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="info@example.com" required="" type="email"/>
+<input name="Email" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="info@example.com" required="" type="email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address (e.g. name@example.com)"/>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 bg-surface border border-outline-variant rounded-lg">
@@ -391,6 +391,19 @@
   document.getElementById('quote-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     const fd = new FormData(this);
+
+    const emailInput = this.querySelector('input[name="Email"]');
+    const emailVal   = fd.get('Email') || '';
+    const emailOk    = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/.test(emailVal);
+    if (!emailOk) {
+      emailInput.focus();
+      emailInput.setCustomValidity('Please enter a valid email address (e.g. name@example.com).');
+      emailInput.reportValidity();
+      setTimeout(() => emailInput.setCustomValidity(''), 3000);
+      return;
+    }
+    emailInput.setCustomValidity('');
+
     const btn = this.querySelector('button[type="submit"]');
     btn.disabled = true;
     btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> Sending…';
