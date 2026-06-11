@@ -181,14 +181,25 @@
                     </h2>
 <p class="font-body text-on-surface-variant mt-2 text-sm">Provide project details below. Our team reviews inquiries hourly during normal operations.</p>
 </div>
-<form class="space-y-6" id="quote-form">
-  <input type="hidden" name="access_key" value="2b8550d5-8923c-4eb2-9e6e-2b64d26499bc">
-  <input type="hidden" name="subject" value="New Quote Request — Whyte Contracting LLC">
-  <input type="hidden" name="from_name" value="Whyte Contracting Website">
+<form class="space-y-6" action="https://formsubmit.co/Valdorastudios@gmail.com" method="POST" id="quote-form" novalidate>
+  <input type="hidden" name="_subject" value="New Quote Request — Whyte Contracting LLC">
+  <input type="hidden" name="_next" value="https://whyte-contracting.vercel.app/contact?sent=1">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+
+  <!-- Validation error banner (hidden by default) -->
+  <div id="form-error-banner" class="hidden flex items-start gap-3 bg-error-container border border-error text-on-error-container font-label text-sm font-bold px-5 py-4 rounded-lg shadow-sm" role="alert">
+    <span class="material-symbols-outlined text-error flex-shrink-0 mt-0.5" style="font-variation-settings:'FILL' 1;">error</span>
+    <div>
+      <p class="font-bold mb-1">Please fill in all required fields before submitting.</p>
+      <ul id="form-error-list" class="font-normal list-disc list-inside space-y-0.5 text-on-error-container/90"></ul>
+    </div>
+  </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div>
 <label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Full Name *</label>
-<input name="Full Name" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="John Doe" required="" type="text"/>
+<input id="field-full-name" name="Full Name" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="John Doe" required="" type="text"/>
+<span class="field-error hidden mt-1 text-error font-label text-xs font-bold flex items-center gap-1"><span class="material-symbols-outlined text-sm">error</span> This field is required.</span>
 </div>
 <div>
 <label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Company (Optional)</label>
@@ -198,18 +209,20 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div>
 <label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Phone Number *</label>
-<input name="Phone" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="(555) 000-0000" required="" type="tel"/>
+<input id="field-phone" name="Phone" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="(555) 000-0000" required="" type="tel"/>
+<span class="field-error hidden mt-1 text-error font-label text-xs font-bold flex items-center gap-1"><span class="material-symbols-outlined text-sm">error</span> This field is required.</span>
 </div>
 <div>
 <label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Email Address *</label>
-<input name="Email" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="info@example.com" required="" type="email"/>
+<input id="field-email" name="Email" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm" placeholder="info@example.com" required="" type="email"/>
+<span class="field-error hidden mt-1 text-error font-label text-xs font-bold flex items-center gap-1"><span class="material-symbols-outlined text-sm">error</span> Enter a valid email address.</span>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 bg-surface border border-outline-variant rounded-lg">
 <div>
 <label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Service Needed *</label>
 <div class="relative">
-<select name="Service Needed" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body appearance-none focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm cursor-pointer pr-10" required="">
+<select id="field-service" name="Service Needed" class="w-full bg-surface-container-lowest border border-outline rounded-lg p-3 font-body appearance-none focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors shadow-sm cursor-pointer pr-10" required="">
 <option disabled="" selected="" value="">Select a Service</option>
 <option value="freight">Heavy Haul &amp; Freight</option>
 <option value="materials">Material Supply</option>
@@ -219,6 +232,7 @@
 </select>
 <span class="material-symbols-outlined absolute right-3 top-3 text-outline pointer-events-none">arrow_drop_down</span>
 </div>
+<span class="field-error hidden mt-1 text-error font-label text-xs font-bold flex items-center gap-1"><span class="material-symbols-outlined text-sm">error</span> Please select a service.</span>
 </div>
 <div>
 <label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide flex items-center gap-2">
@@ -376,41 +390,111 @@
     </div>
   </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
+  // ── Supabase config ──
+  const SUPABASE_URL      = 'https://lxmgavqmlklleosvefio.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx4bWdhdnFtbGtsbGVvc3ZlZmlvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk5ODgzNjgsImV4cCI6MjA5NTU2NDM2OH0.FJPupk5OqR6wJmC1NpdGOKR4-SeeRj4SLmzNqxX6UME';
+  const _sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
   // Mobile menu
   document.getElementById('menu-btn').addEventListener('click', () =>
     document.getElementById('mobile-menu').classList.toggle('hidden'));
 
-  // Web3Forms submission
-  document.getElementById('quote-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('button[type="submit"]');
-    btn.disabled = true;
-    btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> Sending…';
+  // ── Required field definitions ──
+  const REQUIRED_FIELDS = [
+    { id: 'field-full-name', label: 'Full Name',      type: 'text'  },
+    { id: 'field-phone',     label: 'Phone Number',   type: 'text'  },
+    { id: 'field-email',     label: 'Email Address',  type: 'email' },
+    { id: 'field-service',   label: 'Service Needed', type: 'select'}
+  ];
 
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      body: new FormData(this)
-    });
-    const data = await res.json();
-
-    if (data.success) {
-      this.reset();
-      const banner = document.createElement('div');
-      banner.className = 'fixed top-24 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 bg-secondary text-on-secondary font-label font-bold px-6 py-4 rounded shadow-[4px_4px_0px_#32302b] text-sm';
-      banner.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Quote request received — we\'ll be in touch shortly!';
-      document.body.appendChild(banner);
-      setTimeout(() => banner.remove(), 6000);
+  function markField(fieldEl, errorSpan, isInvalid) {
+    if (isInvalid) {
+      fieldEl.classList.add('border-error', 'ring-1', 'ring-error');
+      fieldEl.classList.remove('border-outline');
+      errorSpan && errorSpan.classList.remove('hidden');
     } else {
-      alert('Something went wrong. Please call us at (631) 933-0772.');
+      fieldEl.classList.remove('border-error', 'ring-1', 'ring-error');
+      fieldEl.classList.add('border-outline');
+      errorSpan && errorSpan.classList.add('hidden');
     }
+  }
 
-    btn.disabled = false;
-    btn.innerHTML = '<span class="material-symbols-outlined">send</span> Submit Quote Request';
+  // Live clear errors on input/change
+  REQUIRED_FIELDS.forEach(({ id }) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const errorSpan = el.parentElement.querySelector
+      ? el.parentElement.querySelector('.field-error') || el.nextElementSibling
+      : null;
+    el.addEventListener('input',  () => markField(el, errorSpan, false));
+    el.addEventListener('change', () => markField(el, errorSpan, false));
   });
 
-  // Service dropdown — show/hide material field
-  const serviceSelect = document.querySelector('select[required]');
+  // ── Form submit handler ──
+  document.getElementById('quote-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const errorBanner = document.getElementById('form-error-banner');
+    const errorList   = document.getElementById('form-error-list');
+    let errors = [];
+
+    // Validate each required field
+    REQUIRED_FIELDS.forEach(({ id, label, type }) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const errorSpan = el.parentElement.querySelector('.field-error') || el.nextElementSibling;
+      let invalid = false;
+
+      if (type === 'email') {
+        invalid = !el.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim());
+      } else {
+        invalid = !el.value.trim();
+      }
+
+      markField(el, errorSpan, invalid);
+      if (invalid) errors.push(label);
+    });
+
+    if (errors.length > 0) {
+      errorList.innerHTML = errors.map(e => `<li>${e}</li>`).join('');
+      errorBanner.classList.remove('hidden');
+      errorBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    // All valid — hide banner, try Supabase, then submit
+    errorBanner.classList.add('hidden');
+    const fd = new FormData(this);
+    try {
+      await _sb.from('quote_requests').insert([{
+        name:      fd.get('Full Name'),
+        company:   fd.get('Company'),
+        phone:     fd.get('Phone'),
+        email:     fd.get('Email'),
+        service:   fd.get('Service Needed'),
+        material:  fd.get('Material Needed'),
+        location:  fd.get('Project Location'),
+        load_size: fd.get('Load Size / Tonnage'),
+        referral:  fd.get('How Did You Hear About Us'),
+        notes:     fd.get('Additional Notes')
+      }]);
+    } catch(err) { console.warn('Supabase insert failed:', err); }
+    this.submit(); // FormSubmit delivers the email
+  });
+
+  // ── Success banner ──
+  if (new URLSearchParams(location.search).get('sent') === '1') {
+    const banner = document.createElement('div');
+    banner.className = 'fixed top-24 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 bg-secondary text-on-secondary font-label font-bold px-6 py-4 rounded shadow-[4px_4px_0px_#32302b] text-sm';
+    banner.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Quote request received — we\'ll be in touch shortly!';
+    document.body.appendChild(banner);
+    setTimeout(() => banner.remove(), 6000);
+  }
+
+  // ── Service dropdown — show/hide material field ──
+  const serviceSelect = document.getElementById('field-service');
   const materialWrapper = serviceSelect?.closest('form')?.querySelector('select:not([required])')?.closest('div')?.parentElement;
   if (serviceSelect && materialWrapper) {
     function toggleMaterial() {
