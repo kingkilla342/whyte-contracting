@@ -185,7 +185,6 @@
   <input type="hidden" name="access_key" value="2b8550d5-892c-4eb2-9e6e-2b64d26499bc">
   <input type="hidden" name="subject" value="New Quote Request — Whyte Contracting LLC">
   <input type="hidden" name="from_name" value="Whyte Contracting Website">
-  <input type="hidden" name="cc" value="valdorastudios@gmail.com">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div>
 <label class="block font-label font-bold text-sm text-on-surface mb-2 uppercase tracking-wide">Full Name *</label>
@@ -407,6 +406,26 @@
     const btn = this.querySelector('button[type="submit"]');
     btn.disabled = true;
     btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> Sending…';
+
+    // Validate location against OpenStreetMap
+    const locationInput = this.querySelector('input[name="Project Location"]');
+    const locationVal   = (fd.get('Project Location') || '').trim();
+    if (locationVal) {
+      try {
+        const geoRes  = await fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(locationVal)}&format=json&limit=1`, { headers: { 'Accept-Language': 'en-US,en' } });
+        const geoData = await geoRes.json();
+        if (!geoData.length) {
+          locationInput.focus();
+          locationInput.setCustomValidity('Please enter a real location (e.g. Brooklyn, NY or 11726).');
+          locationInput.reportValidity();
+          setTimeout(() => locationInput.setCustomValidity(''), 4000);
+          btn.disabled = false;
+          btn.innerHTML = '<span class="material-symbols-outlined">send</span> Send My Request';
+          return;
+        }
+        locationInput.setCustomValidity('');
+      } catch(err) { console.warn('Location check skipped:', err); }
+    }
 
     // Save to Supabase
     try {
