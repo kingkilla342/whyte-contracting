@@ -456,10 +456,10 @@
         document.body.appendChild(banner);
         setTimeout(() => banner.remove(), 6000);
       } else {
-        alert('Something went wrong. Please try again or call us at (631) 933-0772.');
+        alert('Web3Forms error: ' + (data.message || JSON.stringify(data)));
       }
     } catch(err) {
-      alert('Network error. Please try again or call us at (631) 933-0772.');
+      alert('Network error: ' + err.message);
     }
 
     btn.disabled = false;
